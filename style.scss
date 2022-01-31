@@ -47,8 +47,18 @@ nav {
 
 .menu-container {
     position: fixed;
-    width: 100%; 
+    @include flex(100%, 0%, flex-end, none);
+    overflow: hidden;
+    transition: height 500ms;
+}
+
+.outside-menu {
+    background-color:rgba( #000000, 0.5);
+    opacity: 0;
+    width: 50%;
     height: 100vh;
+    transform: translateX(-100%);
+    transition: width 250ms ease-in, opacity 250ms ease-in, transform 250ms ease-in;
 }
 
 .menu-wrapper {
@@ -56,14 +66,18 @@ nav {
     width: 50%;
     height: 100vh;
     background-color: $navColor;
-    transform: translateX(200%);
+    transform: translateX(100%);
     transition: transform 250ms ease-in;
-    position: fixed;
+}
+
+.displayMenuContainer {
+    height: 100%;
+    overflow: visible;
 }
 
 .displayMenu {
-    transform: translateX(100%);
-    transition: 70ms transform 250ms ease-in;
+    transform: translateX(0%);
+    transition: 70ms transform 300ms ease-in;
 }
 
 .displayColor {
@@ -71,6 +85,11 @@ nav {
     transition: background-color 200ms ease-in;
 }
 
+.displayOutside {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: 70ms width 300ms ease-in, 70ms opacity 300ms ease-in, 70ms transform 300ms ease-in;
+}
 
 .left {
     width: 100%;
