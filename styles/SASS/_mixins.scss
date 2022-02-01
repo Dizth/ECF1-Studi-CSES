@@ -20,3 +20,13 @@
     height: $height;
     width: $width;
 }
+
+@mixin widthHeight($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}

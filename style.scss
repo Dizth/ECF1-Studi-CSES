@@ -4,6 +4,7 @@ body {
     @extend %resetBody;
     background-color: $bodyColor;
     height: 1200px;
+    font-family: 'Sora', sans-serif;
 }
 
 nav {
@@ -13,16 +14,12 @@ nav {
 }
 
 .span-wrapper {
-    @include flex(100%, auto, flex-start, center);
-    background-color: transparent;
+    @include flex(100%, auto, space-between, center);
+    background-color: $navColor;
     padding: 5px 0 5px 0;
-    transition: 200ms background-color 250ms ease-in;
+    transition: background-color 250ms ease-in;
     & .logo{
         margin: 0 30px 0 10px;
-    }
-    & .rainbow {
-        opacity: 0;
-        transition: opacity 250ms ease-in; 
     }
     & .btn-menu-wrapper {
         margin-left: auto;
@@ -43,52 +40,50 @@ nav {
     }
 }
 
-// revoir width de .menu-container
-
 .menu-container {
     position: fixed;
-    @include flex(100%, 0%, flex-end, none);
-    overflow: hidden;
-    transition: height 500ms;
+    @include flex(100%, 100%, flex-end, none);
+    transition: height 500ms ease;
+
+    & .outside-menu {
+        height: 100vh;
+        flex: 1;
+        background-color:rgba( #000000, 0.5);
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: width 250ms ease-in, opacity 250ms ease-in, transform 250ms ease-in;
+    }
+    
+    & .menu-wrapper {
+        @include widthHeight(50%, 100vh);
+        text-align: center;
+        background-color: $navColor;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform 250ms ease-in, opacity 250ms ease-in;
+        max-width: 376px;
+        & img {
+            width: 100%;
+            max-width: 202px;
+            padding: 15px 0 24px 0;
+        }
+    }
+
+    .displayMenu {
+        transform: translateX(0%);
+        opacity: 1;
+        transition: transform 250ms ease-in, opacity 250ms ease-in;
+    }
+    
+    .displayOutside {
+        opacity: 1;
+        transform: translateX(0%);
+        transition: width 250ms ease-in, opacity 250ms ease-in, transform 250ms ease-in;
+    }
 }
 
-.outside-menu {
-    background-color:rgba( #000000, 0.5);
-    opacity: 0;
-    width: 50%;
-    height: 100vh;
-    transform: translateX(-100%);
-    transition: width 250ms ease-in, opacity 250ms ease-in, transform 250ms ease-in;
-}
-
-.menu-wrapper {
-    text-align: center;
-    width: 50%;
-    height: 100vh;
-    background-color: $navColor;
-    transform: translateX(100%);
-    transition: transform 250ms ease-in;
-}
-
-.displayMenuContainer {
-    height: 100%;
-    overflow: visible;
-}
-
-.displayMenu {
-    transform: translateX(0%);
-    transition: 70ms transform 300ms ease-in;
-}
-
-.displayColor {
-    background-color: $navColor;
-    transition: background-color 200ms ease-in;
-}
-
-.displayOutside {
-    opacity: 1;
-    transform: translateX(0%);
-    transition: 70ms width 300ms ease-in, 70ms opacity 300ms ease-in, 70ms transform 300ms ease-in;
+.menu-list > li{
+    @include font(5vw, 500);
 }
 
 .left {
@@ -97,12 +92,54 @@ nav {
 
 @media screen and (min-width: 576px) {
 
-    .span-wrapper {
-        background-color: $navColor;
-        transition: background-color 250ms ease-in, opacity 250ms ease-in;
-        & .rainbow {
-            transition: opacity 250ms ease-in;            
-            opacity: 1;
+    .menu-list > li{
+        transition: background-color 200ms ease-in;
+        &::before {
+            content: '';
+            @include widthHeight(0%, 5px);
+            background-color: #000000;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            z-index: 2;
+            transition: width 250ms ease-in, background-color 200ms ease-in;
+        }
+        &:hover::before {
+            width: 100%;
+            background-color: $navColor;
+            transition: width 250ms ease-in, background-color 200ms ease-in;
+        }
+        &:hover {
+            background-color: #000000;
+            transition: background-color 200ms ease-in;
+        }
+        &:hover a {
+            color: $navColor;
         }
     }
+}
+
+@media screen and (min-width: 768px) {
+
+    .menu-list > li{
+        @include font(45px, 500);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    
+    .span-wrapper {
+        background-color: transparent;
+        transition: background-color 250ms ease-in, opacity 250ms ease-in;
+    }
+}
+
+.displayColor {
+    background-color: $navColor;
+    transition: background-color 250ms ease-in;
+}
+
+a, a:hover {
+    color: #000000;
+    text-decoration: none;
 }

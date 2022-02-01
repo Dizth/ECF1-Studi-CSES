@@ -8,12 +8,17 @@ btnMenu.addEventListener('click', (e) =>  {
     menuWrapper.classList.toggle('displayMenu')
     spanWrapper.classList.toggle('displayColor')
     outsideMenu.classList.toggle('displayOutside')
-    menuContainer.classList.toggle('displayMenuContainer')
+    if (menuWrapper.classList[1] === 'displayMenu') {
+        menuContainer.style.height = '100%'
+        //document.body.style.overflowY = 'hidden'
+    } else {
+        menuContainer.style.height = '0%'
+        //document.body.style.overflowY = 'visible'
+    }
 })
 
 outsideMenu.addEventListener('click', (e) => {
     menuWrapper.classList.remove('displayMenu')
     spanWrapper.classList.remove('displayColor')
     outsideMenu.classList.remove('displayOutside')
-    menuContainer.classList.remove('displayMenuContainer')
 })
