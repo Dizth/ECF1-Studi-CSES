@@ -4,6 +4,12 @@ body {
   box-sizing: border-box;
 }
 
+.header-container span:first-child {
+  width: 100%;
+  text-align: center;
+  mix-blend-mode: overlay;
+}
+
 body {
   background-color: #f1e3d3;
   height: 1200px;
@@ -13,7 +19,7 @@ body {
 nav {
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 2;
 }
 
 .span-wrapper {
@@ -54,6 +60,7 @@ nav {
   justify-content: flex-end;
   align-items: none;
   transition: height 500ms ease;
+  z-index: 2;
 }
 .menu-container .outside-menu {
   height: 100vh;
@@ -98,6 +105,65 @@ nav {
   width: 100%;
 }
 
+@media screen and (min-width: 960px) {
+  .span-wrapper {
+    background-color: transparent;
+    transition: background-color 250ms ease-in, opacity 250ms ease-in;
+  }
+}
+.displayColor {
+  background-color: #ffffff;
+  transition: background-color 250ms ease-in;
+}
+
+a, a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.header-container {
+  height: calc(100vh - 62px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  background-position: center;
+  z-index: 0;
+}
+.header-container span:first-child {
+  font-size: 20vw;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #000000;
+}
+.header-container span:last-of-type {
+  font-size: 4vw;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+}
+.header-container .ball-container {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1e3d3;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -100px;
+}
+.header-container .ball-container .ball {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
 @media screen and (min-width: 576px) {
   .menu-list > li {
     transition: background-color 200ms ease-in;
@@ -128,24 +194,18 @@ nav {
 }
 @media screen and (min-width: 768px) {
   .menu-list > li {
-    font-size: 45px;
+    font-size: 2.5rem;
     font-weight: 500;
   }
-}
-@media screen and (min-width: 960px) {
-  .span-wrapper {
-    background-color: transparent;
-    transition: background-color 250ms ease-in, opacity 250ms ease-in;
-  }
-}
-.displayColor {
-  background-color: #ffffff;
-  transition: background-color 250ms ease-in;
-}
 
-a, a:hover {
-  color: #000000;
-  text-decoration: none;
+  .header-container span:first-child {
+    font-size: 10rem;
+    font-weight: 700;
+  }
+  .header-container span:last-of-type {
+    font-size: 2rem;
+    font-weight: 400;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

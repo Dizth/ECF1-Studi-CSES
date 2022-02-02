@@ -10,7 +10,7 @@ body {
 nav {
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: 2;
 }
 
 .span-wrapper {
@@ -44,6 +44,7 @@ nav {
     position: fixed;
     @include flex(100%, 100%, flex-end, none);
     transition: height 500ms ease;
+    z-index: 2;
 
     & .outside-menu {
         height: 100vh;
@@ -90,6 +91,56 @@ nav {
     width: 100%;
 }
 
+@media screen and (min-width: 960px) {
+    
+    .span-wrapper {
+        background-color: transparent;
+        transition: background-color 250ms ease-in, opacity 250ms ease-in;
+    }
+}
+
+.displayColor {
+    background-color: $navColor;
+    transition: background-color 250ms ease-in;
+}
+
+a, a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+// - Header //
+
+.header-container {
+    @include flex(100%, calc(100vh - 62px), center, center);
+    flex-flow: column nowrap;
+    background-position: center;
+    z-index: 0;
+    & span:first-child {
+        @extend %headerText;
+        @include font(20vw, 700);
+        color: #ffffff;
+        background-color: #000000;
+    }
+    & span:last-of-type {
+        @include font(4vw, 400);
+        color: #000000;
+        text-align: center;
+    }
+    & .ball-container {
+        @include flex(200px, 200px, center, center);
+        background-color: $bodyColor;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -100px;
+        & .ball {
+            @include flex(150px, 150px, center, center);
+            background-color: #000000;
+            border-radius: 50%;
+        }
+    }
+}
+
 @media screen and (min-width: 576px) {
 
     .menu-list > li{
@@ -122,24 +173,15 @@ nav {
 @media screen and (min-width: 768px) {
 
     .menu-list > li{
-        @include font(45px, 500);
+        @include font(2.5rem, 500);
     }
-}
 
-@media screen and (min-width: 960px) {
-    
-    .span-wrapper {
-        background-color: transparent;
-        transition: background-color 250ms ease-in, opacity 250ms ease-in;
+    .header-container {
+        & span:first-child {
+            @include font(10rem, 700);
+        }
+        & span:last-of-type {
+            @include font(2rem, 400);
+        }
     }
-}
-
-.displayColor {
-    background-color: $navColor;
-    transition: background-color 250ms ease-in;
-}
-
-a, a:hover {
-    color: #000000;
-    text-decoration: none;
 }
