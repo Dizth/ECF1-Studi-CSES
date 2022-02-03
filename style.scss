@@ -3,7 +3,6 @@
 body {
     @extend %resetBody;
     background-color: $bodyColor;
-    height: 1200px;
     font-family: 'Sora', sans-serif;
 }
 
@@ -42,7 +41,7 @@ nav {
 
 .menu-container {
     position: fixed;
-    @include flex(100%, 100%, flex-end, none);
+    @include flex(100%, 0%, flex-end, none);
     transition: height 500ms ease;
     z-index: 2;
 
@@ -91,19 +90,6 @@ nav {
     width: 100%;
 }
 
-@media screen and (min-width: 960px) {
-    
-    .span-wrapper {
-        background-color: transparent;
-        transition: background-color 250ms ease-in, opacity 250ms ease-in;
-    }
-}
-
-.displayColor {
-    background-color: $navColor;
-    transition: background-color 250ms ease-in;
-}
-
 a, a:hover {
     color: #000000;
     text-decoration: none;
@@ -135,11 +121,42 @@ a, a:hover {
         bottom: -100px;
         & .ball {
             @include flex(150px, 150px, center, center);
-            background-color: #000000;
+            background-color: $gold;
             border-radius: 50%;
+            margin-bottom: 50px;
         }
     }
 }
+
+// - Main content //
+
+main {
+    @include flex(100%, 100%, center, center);
+    flex-direction: column;
+    background-color: $bodyColor;
+    margin-top: 25px;
+}
+
+.main-container {
+    @include flex(80%, 100%, center, center);
+    background-color: $mainColor;
+}
+
+.grid-item {
+    @include flex(100px, 100px, center, center);
+    background-color: $bodyColor;
+    border-radius: 50%;
+    transition: width 500ms ease-in, height 500ms ease-in;
+    & img {
+        @include widthHeight(70%, auto);
+    }
+}
+
+// section {
+//     @include flex(100%, 100vh, center, center);
+//     background-color: red;
+//     margin-top: 25px;
+// }
 
 @media screen and (min-width: 576px) {
 
@@ -183,5 +200,26 @@ a, a:hover {
         & span:last-of-type {
             @include font(2rem, 400);
         }
+    }
+    
+}
+
+@media screen and (min-width: 960px) {
+    
+    .span-wrapper {
+        background-color: transparent;
+        transition: background-color 250ms ease-in, opacity 250ms ease-in;
+    }
+    .displayColor {
+        background-color: $navColor;
+        transition: background-color 250ms ease-in;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .grid-item {
+        width: 150px;
+        height: 150px;
+        transition: width 500ms ease-in, height 500ms ease-in;
     }
 }
