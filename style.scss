@@ -101,7 +101,6 @@ a, a:hover {
     @include flex(100%, calc(100vh - 62px), center, center);
     flex-flow: column nowrap;
     background-position: center;
-    z-index: 0;
     & span:first-child {
         @extend %headerText;
         @include font(20vw, 700);
@@ -113,19 +112,22 @@ a, a:hover {
         color: #000000;
         text-align: center;
     }
-    & .ball-container {
-        @include flex(200px, 200px, center, center);
-        background-color: $bodyColor;
-        border-radius: 50%;
-        position: absolute;
-        bottom: -100px;
-        & .ball {
-            @include flex(150px, 150px, center, center);
-            background-color: $gold;
-            border-radius: 50%;
-            margin-bottom: 50px;
-        }
-    }
+}
+
+.ball-container {
+    @include flex(150px, 150px, center, center);
+    background-color: $bodyColor;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -75px;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+    // & .ball {
+    //     @include flex(150px, 150px, center, center);
+    //     background-color: $gold;
+    //     border-radius: 50%;
+    // }
 }
 
 // - Main content //
@@ -134,92 +136,52 @@ main {
     @include flex(100%, 100%, center, center);
     flex-direction: column;
     background-color: $bodyColor;
-    margin-top: 25px;
+    position: relative;
 }
 
 .main-container {
-    @include flex(80%, 100%, center, center);
+    @include flex(100%, 100vh, center, center);
     background-color: $mainColor;
+    position: relative;
+    min-height: 850px;  
 }
 
 .grid-item {
     @include flex(100px, 100px, center, center);
-    background-color: $bodyColor;
-    border-radius: 50%;
-    transition: width 500ms ease-in, height 500ms ease-in;
+    background-color: $navColor;
+    position: relative;
     & img {
-        @include widthHeight(70%, auto);
+        @include widthHeight(70px, 70px);
+    }
+    &::before {
+        content: 'content';
+        position: absolute;
+        top: -25px;
+        opacity: 1;
+        transition: top 100ms ease-in, opacity 100ms ease-in;
+    }
+    // cacher after vers lg à peu prés, laisser apparent avant lg
+}
+
+.ball-shortcut {
+    @include flex(150px, 150px, center, center);
+    background-color: $mainColor;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -75px;
+    z-index: 0;
+}
+
+.rounded-img {
+    @include flex(100%, 100%, center, center);
+    & img {
+        @include widthHeight(300px, 300px);
+        object-fit: cover;        
     }
 }
 
-// section {
-//     @include flex(100%, 100vh, center, center);
-//     background-color: red;
-//     margin-top: 25px;
-// }
-
-@media screen and (min-width: 576px) {
-
-    .menu-list > li{
-        transition: background-color 200ms ease-in;
-        &::before {
-            content: '';
-            @include widthHeight(0%, 5px);
-            background-color: #000000;
-            position: absolute;
-            left: 0;
-            bottom: 10px;
-            z-index: 2;
-            transition: width 250ms ease-in, background-color 200ms ease-in;
-        }
-        &:hover::before {
-            width: 100%;
-            background-color: $navColor;
-            transition: width 250ms ease-in, background-color 200ms ease-in;
-        }
-        &:hover {
-            background-color: #000000;
-            transition: background-color 200ms ease-in;
-        }
-        &:hover a {
-            color: $navColor;
-        }
-    }
+section {
+    @include flex(100%, 100vh, center, center);
+    background-color: $bodyColor;
 }
 
-@media screen and (min-width: 768px) {
-
-    .menu-list > li{
-        @include font(2.5rem, 500);
-    }
-
-    .header-container {
-        & span:first-child {
-            @include font(10rem, 700);
-        }
-        & span:last-of-type {
-            @include font(2rem, 400);
-        }
-    }
-    
-}
-
-@media screen and (min-width: 960px) {
-    
-    .span-wrapper {
-        background-color: transparent;
-        transition: background-color 250ms ease-in, opacity 250ms ease-in;
-    }
-    .displayColor {
-        background-color: $navColor;
-        transition: background-color 250ms ease-in;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .grid-item {
-        width: 150px;
-        height: 150px;
-        transition: width 500ms ease-in, height 500ms ease-in;
-    }
-}

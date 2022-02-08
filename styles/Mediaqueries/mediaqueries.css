@@ -1,0 +1,92 @@
+@media screen and (max-height: 534px) {
+  .ball-container {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-list > li {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  .header-container span:first-child {
+    font-size: 10rem;
+    font-weight: 700;
+  }
+  .header-container span:last-of-type {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 960px) {
+  .menu-list > li {
+    transition: background-color 200ms ease-in;
+  }
+  .menu-list > li::before {
+    content: "";
+    width: 0%;
+    height: 5px;
+    background-color: #000000;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    z-index: 2;
+    transition: width 250ms ease-in, background-color 200ms ease-in;
+  }
+  .menu-list > li:hover::before {
+    width: 100%;
+    background-color: #ffffff;
+    transition: width 250ms ease-in, background-color 200ms ease-in;
+  }
+  .menu-list > li:hover {
+    background-color: #000000;
+    transition: background-color 200ms ease-in;
+  }
+  .menu-list > li:hover a {
+    color: #ffffff;
+  }
+
+  .span-wrapper {
+    background-color: transparent;
+    transition: background-color 250ms ease-in, opacity 250ms ease-in;
+  }
+
+  .displayColor {
+    background-color: #ffffff;
+    transition: background-color 250ms ease-in;
+  }
+
+  .grid-item {
+    transition: box-shadow 100ms ease-in;
+  }
+  .grid-item::before {
+    content: "bite";
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+  }
+  .grid-item:hover::before {
+    top: -25px;
+    opacity: 1;
+    transition: top 100ms ease-in, opacity 100ms ease-in;
+  }
+  .grid-item:hover {
+    box-shadow: 0px 3px 10px black;
+    transition: box-shadow 100ms ease-in;
+  }
+
+  .main-container .container-width {
+    width: 50%;
+  }
+  .main-container .side-cover {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1e3d3;
+  }
+}
+
+/*# sourceMappingURL=mediaqueries.css.map */

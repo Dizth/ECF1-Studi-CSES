@@ -117,7 +117,6 @@ a, a:hover {
   align-items: center;
   flex-flow: column nowrap;
   background-position: center;
-  z-index: 0;
 }
 .header-container span:first-child {
   font-size: 20vw;
@@ -131,26 +130,20 @@ a, a:hover {
   color: #000000;
   text-align: center;
 }
-.header-container .ball-container {
-  height: 200px;
-  width: 200px;
+
+.ball-container {
+  height: 150px;
+  width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f1e3d3;
   border-radius: 50%;
   position: absolute;
-  bottom: -100px;
-}
-.header-container .ball-container .ball {
-  height: 150px;
-  width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #d69d66;
-  border-radius: 50%;
-  margin-bottom: 50px;
+  bottom: -75px;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 250ms ease-in;
 }
 
 main {
@@ -161,16 +154,18 @@ main {
   align-items: center;
   flex-direction: column;
   background-color: #f1e3d3;
-  margin-top: 25px;
+  position: relative;
 }
 
 .main-container {
-  height: 100%;
-  width: 80%;
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #3d6d79;
+  position: relative;
+  min-height: 850px;
 }
 
 .grid-item {
@@ -179,75 +174,54 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f1e3d3;
-  border-radius: 50%;
-  transition: width 500ms ease-in, height 500ms ease-in;
+  background-color: #ffffff;
+  position: relative;
 }
 .grid-item img {
-  width: 70%;
-  height: auto;
+  width: 70px;
+  height: 70px;
+}
+.grid-item::before {
+  content: "content";
+  position: absolute;
+  top: -25px;
+  opacity: 1;
+  transition: top 100ms ease-in, opacity 100ms ease-in;
 }
 
-@media screen and (min-width: 576px) {
-  .menu-list > li {
-    transition: background-color 200ms ease-in;
-  }
-  .menu-list > li::before {
-    content: "";
-    width: 0%;
-    height: 5px;
-    background-color: #000000;
-    position: absolute;
-    left: 0;
-    bottom: 10px;
-    z-index: 2;
-    transition: width 250ms ease-in, background-color 200ms ease-in;
-  }
-  .menu-list > li:hover::before {
-    width: 100%;
-    background-color: #ffffff;
-    transition: width 250ms ease-in, background-color 200ms ease-in;
-  }
-  .menu-list > li:hover {
-    background-color: #000000;
-    transition: background-color 200ms ease-in;
-  }
-  .menu-list > li:hover a {
-    color: #ffffff;
-  }
+.ball-shortcut {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d6d79;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -75px;
+  z-index: 0;
 }
-@media screen and (min-width: 768px) {
-  .menu-list > li {
-    font-size: 2.5rem;
-    font-weight: 500;
-  }
 
-  .header-container span:first-child {
-    font-size: 10rem;
-    font-weight: 700;
-  }
-  .header-container span:last-of-type {
-    font-size: 2rem;
-    font-weight: 400;
-  }
+.rounded-img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@media screen and (min-width: 960px) {
-  .span-wrapper {
-    background-color: transparent;
-    transition: background-color 250ms ease-in, opacity 250ms ease-in;
-  }
+.rounded-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
 
-  .displayColor {
-    background-color: #ffffff;
-    transition: background-color 250ms ease-in;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .grid-item {
-    width: 150px;
-    height: 150px;
-    transition: width 500ms ease-in, height 500ms ease-in;
-  }
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1e3d3;
 }
 
 /*# sourceMappingURL=style.css.map */

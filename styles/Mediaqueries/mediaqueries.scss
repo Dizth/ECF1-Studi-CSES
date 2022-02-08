@@ -1,0 +1,98 @@
+@use "../SASS" as *;
+
+@media screen and (max-height: 534px) {
+    .ball-container {
+        opacity: 0;
+        transition: opacity 250ms ease-in;
+    }
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .menu-list > li{
+        @include font(2.5rem, 500);
+    }
+
+    .header-container {
+        & span:first-child {
+            @include font(10rem, 700);
+        }
+        & span:last-of-type {
+            @include font(2rem, 400);
+        }
+    }
+    
+}
+
+@media screen and (min-width: 960px) {
+
+    .menu-list > li{
+        transition: background-color 200ms ease-in;
+        &::before {
+            content: '';
+            @include widthHeight(0%, 5px);
+            background-color: #000000;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            z-index: 2;
+            transition: width 250ms ease-in, background-color 200ms ease-in;
+        }
+        &:hover::before {
+            width: 100%;
+            background-color: $navColor;
+            transition: width 250ms ease-in, background-color 200ms ease-in;
+        }
+        &:hover {
+            background-color: #000000;
+            transition: background-color 200ms ease-in;
+        }
+        &:hover a {
+            color: $navColor;
+        }
+    }
+    
+    .span-wrapper {
+        background-color: transparent;
+        transition: background-color 250ms ease-in, opacity 250ms ease-in;
+    }
+
+    .displayColor {
+        background-color: $navColor;
+        transition: background-color 250ms ease-in;
+    }
+
+    .grid-item {
+        transition: box-shadow 100ms ease-in;
+        &::before {
+            content: 'bite';
+            position: absolute;
+            top: 0px;
+            opacity: 0;
+        }
+        &:hover::before {
+            top: -25px;
+            opacity: 1;
+            transition: top 100ms ease-in, opacity 100ms ease-in;
+        }
+        &:hover {
+            box-shadow: 0px 3px 10px black;
+            transition: box-shadow 100ms ease-in;
+        }
+
+    }
+
+    .main-container {
+        & .container-width {
+            width: 50%;
+        }
+        & .side-cover {
+            @include flex(50%, 100%, center, center);
+            background-color: $bodyColor;
+        }
+    }
+}
