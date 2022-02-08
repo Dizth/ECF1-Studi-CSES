@@ -69,7 +69,7 @@
     .grid-item {
         transition: box-shadow 100ms ease-in;
         &::before {
-            content: 'bite';
+            content: 'content';
             position: absolute;
             top: 0px;
             opacity: 0;

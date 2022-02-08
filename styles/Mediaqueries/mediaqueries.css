@@ -61,7 +61,7 @@
     transition: box-shadow 100ms ease-in;
   }
   .grid-item::before {
-    content: "bite";
+    content: "content";
     position: absolute;
     top: 0px;
     opacity: 0;
