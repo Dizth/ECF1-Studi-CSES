@@ -10,6 +10,10 @@ body {
   mix-blend-mode: overlay;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f1e3d3;
   font-family: "Sora", sans-serif;
@@ -153,7 +157,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f1e3d3;
   position: relative;
 }
 
@@ -163,23 +166,24 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3d6d79;
   position: relative;
-  min-height: 850px;
 }
 
 .grid-item {
-  height: 100px;
-  width: 100px;
+  height: 13vw;
+  width: 13vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100px;
+  max-height: 100px;
   background-color: #ffffff;
   position: relative;
 }
 .grid-item img {
-  width: 70px;
-  height: 70px;
+  width: 70%;
+  max-width: 70px;
+  max-height: 70px;
 }
 .grid-item::before {
   content: "content";
@@ -195,11 +199,11 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3d6d79;
   border-radius: 50%;
   position: absolute;
   bottom: -75px;
-  z-index: 0;
+  z-index: 1;
+  transition: opacity 250ms ease-in;
 }
 
 .rounded-img {
@@ -209,10 +213,13 @@ main {
   justify-content: center;
   align-items: center;
 }
-.rounded-img img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+.rounded-img div {
+  width: 50vw;
+  height: 50vw;
+  background: center/cover no-repeat url(/ECF1-Studi/img/cuisine.jpg);
+  border-radius: 50%;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 section {
@@ -222,6 +229,18 @@ section {
   justify-content: center;
   align-items: center;
   background-color: #f1e3d3;
+  position: relative;
+  z-index: 0;
+  scroll-snap-align: start;
+}
+section:nth-child(odd) {
+  background-color: #3d6d79;
+}
+section .first {
+  background-color: #f1e3d3;
+}
+section .second {
+  background-color: #3d6d79;
 }
 
 /*# sourceMappingURL=style.css.map */

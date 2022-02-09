@@ -1,4 +1,8 @@
-@use "./styles/SASS" as *;
+@use "./SASS" as *;
+
+* {
+    scroll-behavior: smooth;
+}
 
 body {
     @extend %resetBody;
@@ -123,11 +127,6 @@ a, a:hover {
     z-index: 1;
     opacity: 1;
     transition: opacity 250ms ease-in;
-    // & .ball {
-    //     @include flex(150px, 150px, center, center);
-    //     background-color: $gold;
-    //     border-radius: 50%;
-    // }
 }
 
 // - Main content //
@@ -135,23 +134,30 @@ a, a:hover {
 main {
     @include flex(100%, 100%, center, center);
     flex-direction: column;
-    background-color: $bodyColor;
     position: relative;
 }
+
+// .scroll-container {
+//     @include widthHeight(100%, 100vh);
+//     scroll-snap-type: y mandatory;
+//     overflow-y: scroll;
+// }
 
 .main-container {
     @include flex(100%, 100vh, center, center);
-    background-color: $mainColor;
     position: relative;
-    min-height: 850px;  
 }
 
 .grid-item {
-    @include flex(100px, 100px, center, center);
+    @include flex(13vw, 13vw, center, center);
+    max-width: 100px;
+    max-height: 100px;
     background-color: $navColor;
     position: relative;
     & img {
-        @include widthHeight(70px, 70px);
+        width: 70%;
+        max-width: 70px;
+        max-height: 70px;
     }
     &::before {
         content: 'content';
@@ -165,23 +171,39 @@ main {
 
 .ball-shortcut {
     @include flex(150px, 150px, center, center);
-    background-color: $mainColor;
     border-radius: 50%;
     position: absolute;
     bottom: -75px;
-    z-index: 0;
+    z-index: 1;
+    transition: opacity 250ms ease-in;
 }
 
 .rounded-img {
     @include flex(100%, 100%, center, center);
-    & img {
-        @include widthHeight(300px, 300px);
-        object-fit: cover;        
+    & div {
+        @include widthHeight(50vw, 50vw);
+        background: center / cover no-repeat url(/ECF1-Studi/img/cuisine.jpg);
+        border-radius: 50%;
+        max-width: 300px;
+        max-height: 300px;
     }
 }
 
 section {
     @include flex(100%, 100vh, center, center);
     background-color: $bodyColor;
-}
+    position: relative;
+    z-index: 0;
+    scroll-snap-align: start;
+    &:nth-child(odd) {
+        background-color: $mainColor;
+    }
 
+    .first {
+        background-color: $bodyColor;
+    }
+
+    .second {
+        background-color: $mainColor;
+    }
+}

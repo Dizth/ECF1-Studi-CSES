@@ -12,11 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
+<body id="topAnchor">
     <nav>
         <div class="span-wrapper" id="spanWrapper">
             <span class="logo">
-                <img  src="./img/CSES-logo.png" alt="">
+                <a href="#topAnchor"><img  src="./img/CSES-logo.png" alt=""></a>
             </span>
             <span class="btn-menu-wrapper">
                 <button class="btn-menu" id="menuButton"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="50" fill="currentColor" class="bi bi-three-dots-vertical " viewBox="0 0 16 16">
@@ -51,35 +51,207 @@
         </div>
     </header>
     <main>
-        <div class="main-container">
+        <section class="main-container">
             <div class="container container-width">
-                <div class="row m-5 justify-content-center">
-                    <div role="button" class="grid-item rounded-circle mx-3"><img src="./svg/cake-svgrepo-com.svg" alt=""></div>
-                    <div role="button" class="grid-item rounded-circle mx-3"><img src="./svg/chess-svgrepo-com.svg" alt=""></div>
-                    <div role="button" class="grid-item rounded-circle mx-3"><img src="./svg/jumping-dancer-svgrepo-com.svg" alt=""></div>
+                <div class="row my-5 justify-content-center">
+                    <a href="#cakeCard">
+                        <div role="button" class="grid-item rounded-circle mx-3 my-2">
+                            <img src="./svg/cake-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>
+
+                    <a href="#chessCard">
+                        <div role="button" class="grid-item rounded-circle mx-3 my-2">
+                            <img src="./svg/chess-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>
+
+                    <a href="#danceCard">
+                        <div role="button" class="grid-item rounded-circle mx-3 my-2">
+                            <img src="./svg/jumping-dancer-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>
                 </div>
-                <div class="row m-5 justify-content-center">
-                        <div role="button" class="grid-item rounded-circle mx-3"><img src="./svg/machinery-svgrepo-com.svg" alt=""></div>
-                        <div role="button" class="grid-item rounded-circle mx-3"><img src="./svg/needle-svgrepo-com.svg" alt=""></div>
-                        <div role="button" class="grid-item rounded-circle mx-3"><img src="./svg/pottery-svgrepo-com.svg" alt=""></div>
-                    </div>
-                <div class="row m-5 justify-content-center">
-                        <div role="button" class="grid-item rounded-circle mx-3"><img src="./svg/music-svgrepo-com.svg" alt=""></div>
-                        <div role="button" class="grid-item rounded-circle mx-3"><img src="./svg/child-svgrepo-com.svg" alt=""></div>
-                        <div role="button" class="grid-item rounded-circle mx-3"><img src="./svg/pc-svgrepo-com.svg" alt=""></div>
+
+                <div class="row my-5 justify-content-center">
+                    <a href="#fablabCard">
+                        <div role="button" class="grid-item rounded-circle mx-3 my-2">
+                            <img src="./svg/machinery-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>
+
+                    <a href="#sewingCard">
+                        <div role="button" class="grid-item rounded-circle mx-3 my-2">
+                            <img src="./svg/needle-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>
+                    <a href="#potteryCard">
+                        <div role="button" class="grid-item rounded-circle mx-3 my-2">
+                            <img src="./svg/pottery-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row my-5 justify-content-center">
+                    <a href="#musicCard">
+                        <div role="button" class="grid-item rounded-circle mx-3 my-2">
+                            <img src="./svg/music-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>
+
+                    <a href="#ludoCard">
+                        <div role="button" class="grid-item rounded-circle mx-3 my-2">
+                            <img src="./svg/child-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>
+                    
+                    <a href="#infoCard">
+                        <div role="button" class="grid-item rounded-circle mx-3 my-2">
+                            <img src="./svg/pc-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="side-cover">
                 
             </div>
-            <div class="ball-shortcut">
+            <div class="ball-shortcut first">
                 
             </div>
-        </div>
-        <section>
-            <div class="card mx-4 bg-transparent border-0" style="width: 100%;">
+        </section>
+        <section id="cakeCard">
+            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
                 <div class="rounded-img">
-                    <img class="rounded-circle" src="./img/cuisine.jpg" alt="">
+                    <div>
+                        
+                    </div>
+                </div>
+                    <div class="card-body">
+                    <h5 class="card-title text-center">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn float-right btn-outline-dark">Je m'inscris</a>
+                </div>
+            </div>
+            <div class="ball-shortcut second">
+                
+            </div>
+        </section>
+        <section id="chessCard">
+            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+                <div class="rounded-img">
+                    <div></div>
+                    <!-- <img class="rounded-circle" src="./img/cuisine.jpg" alt=""> -->
+                </div>
+                    <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn float-right btn-outline-dark">Je m'inscris</a>
+                </div>
+            </div>
+            <div class="ball-shortcut first">
+                
+            </div>
+        </section>
+         <section id="danceCard">
+            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+                <div class="rounded-img">
+                    <div></div>
+                    <!-- <img class="rounded-circle" src="./img/cuisine.jpg" alt=""> -->
+                </div>
+                    <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn float-right btn-outline-dark">Je m'inscris</a>
+                </div>
+            </div>
+            <div class="ball-shortcut second">
+                
+            </div>
+        </section>
+        <section id="fablabCard">
+            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+                <div class="rounded-img">
+                    <div></div>
+                    <!-- <img class="rounded-circle" src="./img/cuisine.jpg" alt=""> -->
+                </div>
+                    <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn float-right btn-outline-dark">Je m'inscris</a>
+                </div>
+            </div>
+            <div class="ball-shortcut first">
+                
+            </div>
+        </section>
+        <section id="sewingCard">
+            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+                <div class="rounded-img">
+                    <div></div>
+                    <!-- <img class="rounded-circle" src="./img/cuisine.jpg" alt=""> -->
+                </div>
+                    <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn float-right btn-outline-dark">Je m'inscris</a>
+                </div>
+            </div>
+            <div class="ball-shortcut second">
+                
+            </div>
+        </section>
+        <section id="potteryCard">
+            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+                <div class="rounded-img">
+                    <div></div>
+                    <!-- <img class="rounded-circle" src="./img/cuisine.jpg" alt=""> -->
+                </div>
+                    <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn float-right btn-outline-dark">Je m'inscris</a>
+                </div>
+            </div>
+            <div class="ball-shortcut first">
+                
+            </div>
+        </section>
+        <section id="musicCard">
+            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+                <div class="rounded-img">
+                    <div></div>
+                    <!-- <img class="rounded-circle" src="./img/cuisine.jpg" alt=""> -->
+                </div>
+                    <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn float-right btn-outline-dark">Je m'inscris</a>
+                </div>
+            </div>
+            <div class="ball-shortcut second">
+                
+            </div>
+        </section><section id="ludoCard">
+            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+                <div class="rounded-img">
+                    <div></div>
+                    <!-- <img class="rounded-circle" src="./img/cuisine.jpg" alt=""> -->
+                </div>
+                    <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn float-right btn-outline-dark">Je m'inscris</a>
+                </div>
+            </div>
+            <div class="ball-shortcut first">
+                
+            </div>
+        </section>
+        <section id="infoCard">
+            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+                <div class="rounded-img">
+                    <div></div>
+                    <!-- <img class="rounded-circle" src="./img/cuisine.jpg" alt=""> -->
                 </div>
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>

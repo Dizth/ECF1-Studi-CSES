@@ -1,14 +1,23 @@
 @use "../SASS" as *;
 
-@media screen and (max-height: 534px) {
+@media screen and (max-height: 565px) {
     .ball-container {
         opacity: 0;
         transition: opacity 250ms ease-in;
     }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (max-height: 700px) {
+    .ball-shortcut {
+        opacity: 0;
+        transition: opacity 250ms ease-in;
+    }
+}
 
+@media screen and (max-width: 363px) {
+    .grid-item::before {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -28,7 +37,7 @@
     
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 992px) {
 
     .menu-list > li{
         transition: background-color 200ms ease-in;
@@ -92,7 +101,7 @@
         }
         & .side-cover {
             @include flex(50%, 100%, center, center);
-            background-color: $bodyColor;
+            background-color: $gold;
         }
     }
 }
