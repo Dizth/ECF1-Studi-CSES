@@ -168,6 +168,13 @@ main {
   align-items: center;
   position: relative;
 }
+.main-container .container-width > div > a {
+  border-radius: 50%;
+  width: 13vw;
+  height: 13vw;
+  max-width: 100px;
+  max-height: 100px;
+}
 
 .grid-item {
   height: 13vw;
@@ -186,7 +193,7 @@ main {
   max-height: 70px;
 }
 .grid-item::before {
-  content: "content";
+  content: "definir";
   position: absolute;
   top: -25px;
   opacity: 1;
@@ -241,6 +248,10 @@ section .first {
 }
 section .second {
   background-color: #3d6d79;
+}
+
+video {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

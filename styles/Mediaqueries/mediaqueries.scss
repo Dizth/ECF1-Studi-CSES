@@ -78,7 +78,7 @@
     .grid-item {
         transition: box-shadow 100ms ease-in;
         &::before {
-            content: 'content';
+            content: 'cliquez';
             position: absolute;
             top: 0px;
             opacity: 0;
@@ -98,10 +98,24 @@
     .main-container {
         & .container-width {
             width: 50%;
+            & div > a {
+                border-radius: 50%;
+                @include widthHeight(100px, 100px)
+            }
         }
         & .side-cover {
             @include flex(50%, 100%, center, center);
             background-color: $gold;
+            & video {
+                width: 80%;
+                border-radius: 5px;
+            }
+            & .placeholder {
+                width: 90px;
+                height: 90px;
+                background-size: contain;
+                background-image: url(/ECF1-Studi/img/play.png);
+            }
         }
     }
 }

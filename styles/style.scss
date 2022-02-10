@@ -146,6 +146,12 @@ main {
 .main-container {
     @include flex(100%, 100vh, center, center);
     position: relative;
+    & .container-width > div > a {
+            border-radius: 50%;
+            @include widthHeight(13vw, 13vw);
+            max-width: 100px;
+            max-height: 100px;
+    }
 }
 
 .grid-item {
@@ -160,7 +166,7 @@ main {
         max-height: 70px;
     }
     &::before {
-        content: 'content';
+        content: 'definir';
         position: absolute;
         top: -25px;
         opacity: 1;
@@ -206,4 +212,8 @@ section {
     .second {
         background-color: $mainColor;
     }
+}
+
+video {
+    display: none;
 }
