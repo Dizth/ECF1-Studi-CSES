@@ -16,6 +16,20 @@ nav {
     z-index: 2;
 }
 
+.going-up {
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    z-index: 3;
+    opacity: 0.8;
+    color: $btnMenuColor;
+    transition: color 250ms ease-in;
+    &:hover {
+        color: #000000;
+        transition: color 250ms ease-in;
+    }
+}
+
 .span-wrapper {
     @include flex(100%, auto, space-between, center);
     background-color: $navColor;
@@ -137,12 +151,6 @@ main {
     position: relative;
 }
 
-// .scroll-container {
-//     @include widthHeight(100%, 100vh);
-//     scroll-snap-type: y mandatory;
-//     overflow-y: scroll;
-// }
-
 .main-container {
     @include flex(100%, 100vh, center, center);
     position: relative;
@@ -151,6 +159,16 @@ main {
             @include widthHeight(13vw, 13vw);
             max-width: 100px;
             max-height: 100px;
+    }
+    & .container-width {
+        position: relative;
+        &::before {
+            content: 'Choisir une activité :';
+            position: absolute;
+            right: 50%;
+            transform: translate(50%, -50%);
+            @include font(24px, 400);
+        }
     }
 }
 
@@ -166,13 +184,48 @@ main {
         max-height: 70px;
     }
     &::before {
-        content: 'definir';
+        content: '';
         position: absolute;
         top: -25px;
         opacity: 1;
         transition: top 100ms ease-in, opacity 100ms ease-in;
     }
-    // cacher after vers lg à peu prés, laisser apparent avant lg
+}
+
+.cooking::before{
+    content: 'Cuisine';
+}
+
+.chess::before {
+    content: 'Echecs'
+}
+
+.dance::before {
+    content: 'Danse'
+}
+
+.fablab::before {
+    content: 'FabLab'
+}
+
+.sewing::before {
+    content: 'Couture'
+}
+
+.pottery::before {
+    content: 'Poterie'
+}
+
+.music::before {
+    content: 'Musique'
+}
+
+.ludo::before {
+    content: 'Ludothèque'
+}
+
+.info::before {
+    content: 'Informatique'
 }
 
 .ball-shortcut {
@@ -188,10 +241,44 @@ main {
     @include flex(100%, 100%, center, center);
     & div {
         @include widthHeight(50vw, 50vw);
-        background: center / cover no-repeat url(/ECF1-Studi/img/cuisine.jpg);
         border-radius: 50%;
         max-width: 300px;
         max-height: 300px;
+    }
+    & .cooking-img {
+        background: center / cover no-repeat url(/img/cuisine.jpg);
+    }
+    
+    .chess-img {
+        background: center / cover no-repeat url(/img/echecs.jpeg);
+    }
+    
+    .dance-img {
+        background: center / cover no-repeat url(/img/danse.jpg);
+    }
+    
+    .fablab-img {
+        background: center / cover no-repeat url(/img/fablab.jpg);
+    }
+    
+    .sewing-img {
+        background: center / cover no-repeat url(/img/couture.jpg);
+    }
+    
+    .pottery-img {
+        background: center / cover no-repeat url(/img/poterie.jpg);
+    }
+    
+    .music-img {
+        background: center / cover no-repeat url(/img/musique.jpg);
+    }
+    
+    .ludo-img {
+        background: center / cover no-repeat url(/img/Ludotheque.jpg);
+    }
+    
+    .info-img {
+        background: center / cover no-repeat url(/img/informatique.jpg);
     }
 }
 
