@@ -119,13 +119,13 @@ a, a:hover {
     @include flex(100%, calc(100vh - 62px), center, center);
     flex-flow: column nowrap;
     background-position: center;
-    & span:first-child {
+    & h1 {
         @extend %headerText;
         @include font(20vw, 700);
         color: #ffffff;
         background-color: #000000;
     }
-    & span:last-of-type {
+    & span {
         @include font(4vw, 400);
         color: #000000;
         text-align: center;
@@ -154,6 +154,10 @@ main {
 .main-container {
     @include flex(100%, 100vh, center, center);
     position: relative;
+    & h2 {
+        @include font(4vw, 400);
+        color: $navColor;
+    }
     & .container-width > div > a {
             border-radius: 50%;
             @include widthHeight(13vw, 13vw);
@@ -162,13 +166,6 @@ main {
     }
     & .container-width {
         position: relative;
-        &::before {
-            content: 'Choisir une activité :';
-            position: absolute;
-            right: 50%;
-            transform: translate(50%, -50%);
-            @include font(24px, 400);
-        }
     }
 }
 
@@ -189,6 +186,8 @@ main {
         top: -25px;
         opacity: 1;
         transition: top 100ms ease-in, opacity 100ms ease-in;
+        color: $navColor;
+        @include font(2.5vw, 400)
     }
 }
 

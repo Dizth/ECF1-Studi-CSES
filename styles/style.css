@@ -5,7 +5,7 @@ body {
   box-sizing: border-box;
 }
 
-.header-container span:first-child {
+.header-container h1 {
   width: 100%;
   text-align: center;
   mix-blend-mode: overlay;
@@ -137,13 +137,13 @@ a, a:hover {
   flex-flow: column nowrap;
   background-position: center;
 }
-.header-container span:first-child {
+.header-container h1 {
   font-size: 20vw;
   font-weight: 700;
   color: #ffffff;
   background-color: #000000;
 }
-.header-container span:last-of-type {
+.header-container span {
   font-size: 4vw;
   font-weight: 400;
   color: #000000;
@@ -183,6 +183,11 @@ main {
   align-items: center;
   position: relative;
 }
+.main-container h2 {
+  font-size: 4vw;
+  font-weight: 400;
+  color: #ffffff;
+}
 .main-container .container-width > div > a {
   border-radius: 50%;
   width: 13vw;
@@ -192,14 +197,6 @@ main {
 }
 .main-container .container-width {
   position: relative;
-}
-.main-container .container-width::before {
-  content: "Choisir une activité :";
-  position: absolute;
-  right: 50%;
-  transform: translate(50%, -50%);
-  font-size: 24px;
-  font-weight: 400;
 }
 
 .grid-item {
@@ -224,6 +221,9 @@ main {
   top: -25px;
   opacity: 1;
   transition: top 100ms ease-in, opacity 100ms ease-in;
+  color: #ffffff;
+  font-size: 2.5vw;
+  font-weight: 400;
 }
 
 .cooking::before {

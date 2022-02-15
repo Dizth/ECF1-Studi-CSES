@@ -14,12 +14,6 @@
     }
 }
 
-@media screen and (max-width: 363px) {
-    .grid-item::before {
-        display: none;
-    }
-}
-
 @media screen and (min-width: 768px) {
 
     .menu-list > li{
@@ -27,14 +21,26 @@
     }
 
     .header-container {
-        & span:first-child {
+        & h1 {
             @include font(10rem, 700);
         }
-        & span:last-of-type {
+        & span {
             @include font(2rem, 400);
         }
     }
+
+    .main-container {
+        & h2 {
+            @include font(2rem, 400)
+        }
+    }
     
+    .grid-item {
+        &::before {
+            @include font(1.2rem, 400)
+        }
+    }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -83,7 +89,7 @@
             opacity: 0;
         }
         &:hover::before {
-            top: -25px;
+            top: -30px;
             opacity: 1;
             transition: top 100ms ease-in, opacity 100ms ease-in;
         }
