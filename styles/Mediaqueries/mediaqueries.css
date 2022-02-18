@@ -1,4 +1,4 @@
-@media screen and (max-height: 565px) {
+@media screen and (max-height: 700px) {
   .ball-container {
     opacity: 0;
     transition: opacity 250ms ease-in;

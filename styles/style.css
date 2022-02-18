@@ -29,7 +29,7 @@ nav {
 .going-up {
   position: fixed;
   bottom: 15px;
-  right: 10px;
+  left: 0;
   z-index: 3;
   opacity: 0.8;
   color: #6d6969;
@@ -330,6 +330,7 @@ section {
 }
 section:nth-child(odd) {
   background-color: #3d6d79;
+  color: #ffffff;
 }
 section .first {
   background-color: #f1e3d3;
