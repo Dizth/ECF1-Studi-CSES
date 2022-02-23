@@ -3,8 +3,7 @@
     opacity: 0;
     transition: opacity 250ms ease-in;
   }
-}
-@media screen and (max-height: 700px) {
+
   .ball-shortcut {
     opacity: 0;
     transition: opacity 250ms ease-in;
@@ -22,16 +21,6 @@
   }
   .header-container span {
     font-size: 2rem;
-    font-weight: 400;
-  }
-
-  .main-container h2 {
-    font-size: 2rem;
-    font-weight: 400;
-  }
-
-  .grid-item::before {
-    font-size: 1.2rem;
     font-weight: 400;
   }
 }

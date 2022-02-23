@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body id="topAnchor">
+<body>
     <nav>
         <div class="span-wrapper" id="spanWrapper">
             <span class="logo">
@@ -25,13 +25,11 @@
             </span>
         </div>
     </nav>
-    <a href="#topAnchor">
-        <div class="going-up">
+    <button id="btnTop" class="going-up">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
             </svg>
-        </div>
-    </a>
+    </button>
     <div class="menu-container" id="menuContainer">
         <div class="outside-menu" id="outsideMenu"></div>
         <div class="menu-wrapper" id="menuWrapper">
@@ -59,68 +57,66 @@
     </header>
     <main>
         <section class="main-container">
-            <div class="container container-width">
-                <div class="row my-5 justify-content-center">
+            <div class="container-width">
+                <div class="justify-content-center d-flex">
                     <h2>Choisissez une activité :</h2>
                 </div>
-                <div class="row my-5 justify-content-center">
-                    <a href="#cakeCard" id="btnCooking" class="mx-3 my-2">
+                <div class="pt-3 mt-3">
+                <div class="justify-content-center d-flex col-12">
+                    <a href="#cakeCard" id="btnCooking" class="m-4">
                         <div role="button" class="grid-item cooking rounded-circle">
                             <img src="./svg/cake-svgrepo-com.svg" alt="">
                         </div>
                     </a>
-
-                    <a href="#chessCard" id="btnChess" class="mx-3 my-2">
+                    <a href="#chessCard" id="btnChess" class="m-4">
                         <div role="button" class="grid-item chess rounded-circle">
                             <img src="./svg/chess-svgrepo-com.svg" alt="">
                         </div>
                     </a>
-
-                    <a href="#danceCard" id="btnDance" class="mx-3 my-2">
+                    <a href="#danceCard" id="btnDance" class="m-4">
                         <div role="button" class="grid-item dance rounded-circle">
                             <img src="./svg/jumping-dancer-svgrepo-com.svg" alt="">
                         </div>
                     </a>
                 </div>
 
-                <div class="row my-5 justify-content-center">
-                    <a href="#fablabCard" id="btnFablab" class="mx-3 my-2">
-                        <div role="button" class="grid-item fablab rounded-circle">
+                <div class="justify-content-center d-flex col-12">
+                    <a href="#fablabCard" id="btnFablab" class="m-4">
+                        <div role="button" class="grid-item fablab rounded-circle">                               
                             <img src="./svg/machinery-svgrepo-com.svg" alt="">
                         </div>
                     </a>
-
-                    <a href="#sewingCard" id="btnSewing" class="mx-3 my-2">
+                    <a href="#sewingCard" id="btnSewing" class="m-4">
                         <div role="button" class="grid-item sewing rounded-circle">
-                            <img src="./svg/needle-svgrepo-com.svg" alt="">
+                            <img src="./svg/needle-svgrepo-com.svg" alt="">                            
                         </div>
                     </a>
-                    <a href="#potteryCard" id="btnPottery" class="mx-3 my-2">
+                    <a href="#potteryCard" id="btnPottery" class="m-4">
                         <div role="button" class="grid-item pottery rounded-circle">
                             <img src="./svg/pottery-svgrepo-com.svg" alt="">
                         </div>
                     </a>
                 </div>
 
-                <div class="row my-5 justify-content-center">
-                    <a href="#musicCard" id="btnMusic" class="mx-3 my-2">
+                <div class="justify-content-center d-flex col-12">
+                    <a href="#musicCard" id="btnMusic" class="m-4">
                         <div role="button" class="grid-item music rounded-circle">
                             <img src="./svg/music-svgrepo-com.svg" alt="">
                         </div>
                     </a>
-
-                    <a href="#ludoCard" id="btnLudo" class="mx-3 my-2">
+                    <a href="#ludoCard" id="btnLudo" class="m-4">
                         <div role="button" class="grid-item ludo rounded-circle">
                             <img src="./svg/child-svgrepo-com.svg" alt="">
                         </div>
                     </a>
                     
-                    <a href="#infoCard" id="btnInfo" class="mx-3 my-2">
+                    <a href="#infoCard" id="btnInfo" class="m-4">
                         <div role="button" class="grid-item info rounded-circle">
                             <img src="./svg/pc-svgrepo-com.svg" alt="">
                         </div>
                     </a>
                 </div>
+            </div>
             </div>
             <div class="side-cover">
                 <video id="cookingVid" autoplay muted="" loop="infinite" src="./videos/cooking.mp4"></video>
