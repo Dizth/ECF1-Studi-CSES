@@ -130,8 +130,13 @@ a, a:hover {
     }
     & span {
         @include font(4vw, 400);
-        color: #000000;
+        color: $navColor;
         text-align: center;
+    }
+    & span:last-of-type::after {
+        content: 'Ham';
+        color: #000000;
+        opacity: 0.5;
     }
 }
 
@@ -289,6 +294,7 @@ section {
     background-color: $bodyColor;
     position: relative;
     z-index: 0;
+    min-height: 600px;
     &:nth-child(odd) {
         background-color: $mainColor;
         color: $navColor;
