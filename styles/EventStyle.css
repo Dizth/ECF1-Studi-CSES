@@ -129,4 +129,24 @@ h1 {
   font-weight: 500;
 }
 
+.rounded-heart {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  right: -15px;
+  bottom: -35px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.rounded-heart .show {
+  display: block;
+}
+.rounded-heart .hide {
+  display: none;
+}
+
 /*# sourceMappingURL=EventStyle.css.map */

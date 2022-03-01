@@ -298,31 +298,31 @@ main {
   max-height: 300px;
 }
 .rounded-img .cooking-img {
-  background: center/cover no-repeat url(/img/cuisine.jpg);
+  background: center/cover no-repeat url(../img/cuisine.jpg);
 }
 .rounded-img .chess-img {
-  background: center/cover no-repeat url(/img/echecs.jpeg);
+  background: center/cover no-repeat url(../img/echecs.jpeg);
 }
 .rounded-img .dance-img {
-  background: center/cover no-repeat url(/img/danse.jpg);
+  background: center/cover no-repeat url(../img/danse.jpg);
 }
 .rounded-img .fablab-img {
-  background: center/cover no-repeat url(/img/fablab.jpg);
+  background: center/cover no-repeat url(../img/fablab.jpg);
 }
 .rounded-img .sewing-img {
-  background: center/cover no-repeat url(/img/couture.jpg);
+  background: center/cover no-repeat url(../img/couture.jpg);
 }
 .rounded-img .pottery-img {
-  background: center/cover no-repeat url(/img/poterie.jpg);
+  background: center/cover no-repeat url(../img/poterie.jpg);
 }
 .rounded-img .music-img {
-  background: center/cover no-repeat url(/img/musique.jpg);
+  background: center/cover no-repeat url(../img/musique.jpg);
 }
 .rounded-img .ludo-img {
-  background: center/cover no-repeat url(/img/Ludotheque.jpg);
+  background: center/cover no-repeat url(../img/Ludotheque.jpg);
 }
 .rounded-img .info-img {
-  background: center/cover no-repeat url(/img/informatique.jpg);
+  background: center/cover no-repeat url(../img/informatique.jpg);
 }
 
 section {

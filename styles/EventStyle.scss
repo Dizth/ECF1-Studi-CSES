@@ -119,5 +119,21 @@ a, a:hover {
 //main page
 
 h1 {
-    @include font(2rem, 500)
+    @include font(2rem, 500);
+}
+
+.rounded-heart {
+    @include flex(70px, 70px, center, center);
+    background-color: $navColor;
+    right: -15px;
+    bottom: -35px;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,.125);
+    & .show {
+        display: block;
+    }
+    & .hide {
+        display: none;
+    }
 }
