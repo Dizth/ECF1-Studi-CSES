@@ -137,3 +137,12 @@ h1 {
         display: none;
     }
 }
+
+textarea {
+    resize: none;
+}
+
+form:last-of-type {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
