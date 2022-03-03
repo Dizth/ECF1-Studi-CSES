@@ -124,11 +124,6 @@ a, a:hover {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
 .rounded-heart {
   height: 70px;
   width: 70px;
@@ -153,9 +148,20 @@ textarea {
   resize: none;
 }
 
-form:last-of-type {
+section form:last-child {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+}
+
+.bg-color {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.bg-color > h1, h2 {
+  font-size: 7.2vw;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=EventStyle.css.map */

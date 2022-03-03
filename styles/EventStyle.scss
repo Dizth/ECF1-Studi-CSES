@@ -1,5 +1,7 @@
 @use "./SASS" as *;
 
+//Nav-menu + general
+
 * {
     scroll-behavior: smooth;
 }
@@ -118,10 +120,6 @@ a, a:hover {
 
 //main page
 
-h1 {
-    @include font(2rem, 500);
-}
-
 .rounded-heart {
     @include flex(70px, 70px, center, center);
     background-color: $navColor;
@@ -142,7 +140,17 @@ textarea {
     resize: none;
 }
 
-form:last-of-type {
+section form:last-child {
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
+}
+
+.bg-color {
+    background-color: $navColor;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.bg-color > h1, h2 {
+    @include font(7.2vw, 500)
 }
