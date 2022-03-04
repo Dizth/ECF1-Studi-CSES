@@ -23,7 +23,7 @@ outsideMenu.addEventListener('click', (e) => {
     outsideMenu.classList.remove('displayOutside')
 })
 
-//to the top
+//to the top btn
 const btnTopEvent = document.getElementById('btnTopEvent')
 
 btnTopEvent.addEventListener('click', (e) => {
@@ -35,35 +35,67 @@ btnTopEvent.addEventListener('click', (e) => {
 const btnHeart = document.getElementById('btnHeart')
 const interestedProgress = document.getElementById('interestedProgress')
 const btnInterested = document.getElementById('interested')
-
-btnHeart.addEventListener('click', (e) => {
-    let count = interestedProgress.getAttribute('aria-valuenow')
-    if (btnHeart.childNodes[3].classList.contains('hide')) {
-        parseInt(count)
-        count++
-        btnHeart.childNodes[3].classList.remove('hide')
-        btnHeart.childNodes[1].classList.add('hide')
-        interestedProgress.innerText = count + ' / 250'
-    } else {
-        btnHeart.childNodes[1].classList.remove('hide')
-        btnHeart.childNodes[3].classList.add('hide')
-        interestedProgress.innerText = count + ' / 250'
-    }
-})
+const valueMax =  parseInt(interestedProgress.getAttribute('aria-valuemax'))
+let interestedCount = parseInt(interestedProgress.getAttribute('aria-valuenow'))
+let cpt = 0
+let max = 0
 
 btnInterested.addEventListener('click', (e) => {
-    let count = interestedProgress.getAttribute('aria-valuenow')
-    if (btnHeart.childNodes[3].classList.contains('hide')) {
-        parseInt(count)
-        count++
-        btnHeart.childNodes[3].classList.remove('hide')
-        btnHeart.childNodes[1].classList.add('hide')
-        interestedProgress.innerText = count + ' / 250'
-    } else {
-        btnHeart.childNodes[1].classList.remove('hide')
-        btnHeart.childNodes[3].classList.add('hide')
-        interestedProgress.innerText = count + ' / 250'
+    if (max < valueMax) {
+        if (cpt === 0) {
+            btnHeart.childNodes[3].classList.remove('hide')
+            btnHeart.childNodes[1].classList.add('hide')
+            interestedCount++
+            let total = interestedCount * 100 / valueMax
+            let string = ''
+            string += total
+            cpt++
+            max++
+            interestedProgress.innerText = interestedCount + ' / 250'
+            return changeWidth(string)
+        } else {
+            btnHeart.childNodes[1].classList.remove('hide')
+            btnHeart.childNodes[3].classList.add('hide')
+            interestedCount--
+            let total = interestedCount * 100 / valueMax
+            let string = ''
+            string += total
+            cpt = 0
+            max--
+            interestedProgress.innerText = interestedCount + ' / 250'
+            return changeWidth(string)
+        }
     }
 })
 
+btnHeart.addEventListener('click', (e) => {
+    if (max < valueMax) {
+        if (cpt === 0) {
+            btnHeart.childNodes[3].classList.remove('hide')
+            btnHeart.childNodes[1].classList.add('hide')
+            interestedCount++
+            let total = interestedCount * 100 / valueMax
+            let string = ''
+            string += total
+            cpt++
+            max++
+            interestedProgress.innerText = interestedCount + ' / 250'
+            return changeWidth(string)
+        } else {
+            btnHeart.childNodes[1].classList.remove('hide')
+            btnHeart.childNodes[3].classList.add('hide')
+            interestedCount--
+            let total = interestedCount * 100 / valueMax
+            let string = ''
+            string += total
+            cpt = 0
+            max--
+            interestedProgress.innerText = interestedCount + ' / 250'
+            return changeWidth(string)
+        }
+    }
+})
 
+function changeWidth(string) {
+    interestedProgress.style.width = string + '%'
+}

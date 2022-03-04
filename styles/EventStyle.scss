@@ -145,12 +145,16 @@ section form:last-child {
     border-radius: .25rem;
 }
 
-.bg-color {
+.bg-color-title {
     background-color: $navColor;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
 }
 
-.bg-color > h1, h2 {
+.bg-color-title > h1, h2 {
     @include font(7.2vw, 500)
+}
+
+.bg-cards {
+    background-color: $bodyColor;
 }

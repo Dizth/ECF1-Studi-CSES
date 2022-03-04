@@ -134,7 +134,6 @@ btnInfo.addEventListener('mouseout',(e) => {
 })
 
 //To the top btn
-
 btnTop.addEventListener('click', (e) => {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera

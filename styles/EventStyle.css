@@ -153,15 +153,19 @@ section form:last-child {
   border-radius: 0.25rem;
 }
 
-.bg-color {
+.bg-color-title {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 
-.bg-color > h1, h2 {
+.bg-color-title > h1, h2 {
   font-size: 7.2vw;
   font-weight: 500;
+}
+
+.bg-cards {
+  background-color: #f1e3d3;
 }
 
 /*# sourceMappingURL=EventStyle.css.map */
