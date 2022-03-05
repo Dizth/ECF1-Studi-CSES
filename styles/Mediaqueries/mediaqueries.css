@@ -115,6 +115,28 @@
     background-size: contain;
     background-image: url(/img/play.png);
   }
+
+  article {
+    height: 100vh;
+  }
+
+  .text-wrapper {
+    width: 70%;
+    padding: 5vw;
+  }
+
+  section ul li:last-child {
+    justify-content: end;
+  }
+
+  .img-wrapper {
+    display: block;
+  }
+
+  .ball {
+    top: -75px;
+    right: -75px;
+  }
 }
 
 /*# sourceMappingURL=mediaqueries.css.map */

@@ -120,56 +120,69 @@ header {
 
 //main
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    color: mediumaquamarine;
+article {
+    @include flex(100%, auto, start, center);
 }
 
-h1 {
+.text-wrapper {
+    @include flex(100%, 100%, center, center);
+    padding: 100px 50px;
+    background-color: $mainColor;
+    position: relative;
+
+}
+
+.ball {
+    @include flex(150px, 150px, center, center);
+    background-color: $bodyColor;
+    border-radius: 50%;
     position: absolute;
-    top: 40vh;
+    top: -75px;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+}
+
+section ul {
     width: 100%;
-    text-align: center;
-    font-size: 6rem;
-    letter-spacing: 2px;
-    font-style: italic;
-}
-
-ul {
-    position: absolute;
-    right: 5%;
-    top: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    padding: 0;
 }
 
-ul li {
-    height: 4rem;
-    display: flex;
+section ul li {
+    height: auto;
     overflow: hidden;
-    margin-bottom: 0.5rem;
-    justify-content: flex-end;
+    &:last-child {
+        display: flex;
+        justify-content: start;
+    }
+    &:last-child > p {
+        color: $gold;
+        font-size: 1.2rem;
+        margin-top: 36px;
+    }
 }
 
-ul li span {
-    display: block;
-    line-height: 4rem;
-    font-size: 4rem;
-    text-transform: uppercase;
-    margin: 0.05rem;
+ul li p {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
     transform: translateY(200%);
+    color: $navColor;
 }
 
-ul li span.active{
+section ul li p.active{
     transform: translateY(0%);
     transition: 1s ease-out;
 }
 
-ul li:hover{
-    opacity: 0.5;
-    cursor: pointer;
+.img-wrapper {
+    @include widthHeight(30%, 100vh);
+    overflow: hidden;
+    display: none;
+}
+
+.img-wrapper > img {
+    @include widthHeight(100%, 100%);
+    object-fit: cover;
 }

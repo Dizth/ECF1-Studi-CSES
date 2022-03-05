@@ -8,7 +8,6 @@ body {
 .header-container h1 {
   width: 100%;
   text-align: center;
-  mix-blend-mode: overlay;
 }
 
 * {
@@ -138,13 +137,13 @@ a, a:hover {
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  background-position: center;
+  background: center no-repeat url(/img/CSES2blur.jpg);
 }
 .header-container h1 {
   font-size: 20vw;
   font-weight: 700;
   color: #ffffff;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .header-container span {
   font-size: 4vw;

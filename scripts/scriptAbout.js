@@ -25,7 +25,8 @@ outsideMenu.addEventListener('click', (e) => {
 })
 
 //text reveal
-let listItems = [...document.querySelectorAll('li')]
+let ulList = [...document.getElementById('textReveal').childNodes]
+let listItems = ulList.filter(element => element.localName !== "li" ? element.pop : element)
 
 let options = {
     rootMargin: '-10%',
