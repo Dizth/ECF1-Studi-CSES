@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/AboutStyle.css">
+    <link rel="stylesheet" href="./styles/MenuStyle.css">
     <link rel="stylesheet" href="./styles/mediaqueries/mediaqueries.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,7 @@
             </span>
         </div>
     </nav>
-    <button id="btnTopEvent" class="going-up">
+    <button id="btnTop" class="going-up">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
             </svg>
@@ -36,7 +37,7 @@
             <img src="./img/CSES-logo2.png" alt="">
             <ul class="list-group list-group-flush menu-list">
                 <li class="list-group-item item-activities" ><a href="./index.html">Accueil</a></li>
-                <li class="list-group-item item-about" ><a href="#">A Propos</a></li>
+                <li class="list-group-item item-about" ><a href="./events.html">Événements</a></li>
                 <li class="list-group-item disabled item-buildings" ><a>Locaux</a></li>
                 <li class="list-group-item disabled item-subscribe" ><a>Adhésion</a></li>
                 <li class="list-group-item disabled item-caf" ><a>CAF</a></li>
@@ -45,7 +46,11 @@
         </div>
     </div>
     <header>
-     
+        <div>
+            <h1>
+                Qui sommes nous ?
+            </h1>
+        </div>
     </header>
     <main>
         <article>
@@ -54,14 +59,14 @@
                     <li>
                         <p>
                             Parents, ados, seniors, familles, enfants, le Centre Social propose
-                            des activités pour tous et pour tout les goûts ! 
+                            des activités pour tous et pour tous les goûts ! 
                             Avec quelques nouveautés en cette nouvelle rentrée :
                         </p>
                     </li>
                     <li>
                         <p>
                             FabLab (création d'objets grâce aux imprimantes 3D et ateliers de fabrication),
-                            Musique assistée par ordinateur, atelier d'écriture , plate-forme Bip Pop ...
+                            Musique assistée par ordinateur, atelier d'écriture, plate-forme Bip Pop ...
                         </p>
                     </li>
                     <li>
@@ -73,12 +78,12 @@
                     <li>
                         <p>
                             Un lieu de vie au service de la population, qu'il s'agisse d'accompagner les personnes dans
-                            l'utilisation des outils numériques, de faciliter leur accès au droit (CAF, CPAM ...)
+                            l'utilisation des outils numériques, de faciliter leur accès au droit (CAF, CPAM ...).
                         </p>
                     </li>
                     <li>
                         <p>
-                            de pratiquer une activité de loisirs et de découverte, d'échanger et créer du lien
+                            Pratiquez une activité de loisirs et de découverte, échangez et créez du lien
                             avec les autres, il s'agit bien d'une véritable "Maison pour tous" dans laquelle
                             les adhérents peuvent être bénévoles et s'investir :
                         </p>
@@ -109,6 +114,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="./scripts/scriptMenu.js"></script>
 <script src="./scripts/scriptAbout.js"></script>
 </body>
 </html>

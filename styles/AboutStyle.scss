@@ -1,127 +1,53 @@
 @use "./SASS" as *;
 
-body {
-    @extend %resetBody;
-    background-color: $bodyColor;
-    font-family: 'Sora', sans-serif;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
-
-.going-up {
-    position: fixed;
-    bottom: 15px;
-    left: 0;
-    z-index: 3;
-    opacity: 0.8;
-    color: $btnMenuColor;
-    transition: color 250ms ease-in;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    &:hover {
-        color: #000000;
-        transition: color 250ms ease-in;
-    }
-}
-
-.span-wrapper {
-    @include flex(100%, auto, space-between, center);
-    background-color: $navColor;
-    padding: 5px 0 5px 0;
-    transition: background-color 250ms ease-in;
-    & .logo{
-        margin: 0 30px 0 10px;
-    }
-    & .btn-menu-wrapper {
-        margin-left: auto;
-        padding-right: 10px;
-        & .btn-menu {
-            width: 100%;
-            background-color: transparent;
-            opacity: 0.8;
-            border: none;
-            color: $btnMenuColor;
-            transition: color 250ms ease-in;
-        }
-    }
-
-    &:hover > .btn-menu-wrapper > .btn-menu {
-        color: #000000;
-        transition: color 250ms ease-in;
-    }
-}
-
-.menu-container {
-    position: fixed;
-    @include flex(100%, 0%, flex-end, none);
-    transition: height 500ms ease;
-    z-index: 2;
-
-    & .outside-menu {
-        height: 100vh;
-        flex: 1;
-        background-color:rgba( #000000, 0.5);
-        opacity: 0;
-        transform: translateX(-100%);
-        transition: width 250ms ease-in, opacity 250ms ease-in, transform 250ms ease-in;
-    }
-    
-    & .menu-wrapper {
-        @include widthHeight(50%, 100vh);
-        text-align: center;
-        background-color: $navColor;
-        transform: translateX(100%);
-        opacity: 0;
-        transition: transform 250ms ease-in, opacity 250ms ease-in;
-        max-width: 376px;
-        & img {
-            width: 100%;
-            max-width: 202px;
-            padding: 15px 0 24px 0;
-        }
-    }
-
-    .displayMenu {
-        transform: translateX(0%);
-        opacity: 1;
-        transition: transform 250ms ease-in, opacity 250ms ease-in;
-    }
-    
-    .displayOutside {
-        opacity: 1;
-        transform: translateX(0%);
-        transition: width 250ms ease-in, opacity 250ms ease-in, transform 250ms ease-in;
-    }
-}
-
-.menu-list > li{
-    @include font(5vw, 500);
-}
-
-.left {
-    width: 100%;
-}
-
-a, a:hover {
-    color: #000000;
-    text-decoration: none;
-}
-
 //header
-
 header {
-    @include widthHeight(100%, calc(100vh - 62px));
+    @include flex(100%, calc(100vh - 62px), center, center);
+    min-height: 800px;
+    & div {
+        @include flex(50vw, 50vw, center, center);
+        background-color: $gold;
+        border-radius: 50%;
+        position: relative;
+        max-width: 31rem;
+        max-height: 31rem;
+        & h1 {
+            @include font(4vw, 500);
+        }
+    }
+    & div::before {
+        content: "";
+        @include flex(10vw, 10vw, center, center);
+        min-width: 70px;
+        min-height: 70px;
+        max-width: 120px;
+        max-height: 120px;
+        background-color: $mainColor;
+        border-radius: 50%;
+        position: absolute;
+        top: -150px;
+        right: 0;
+    }
+    & div::after {
+        content: "";
+        @include flex(10vw, 10vw, center, center);
+        min-width: 70px;
+        min-height: 70px;
+        max-width: 120px;
+        max-height: 120px;
+        background-color: $mainColor;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -150px;
+        left: 0;
+    }
 }
 
 //main
 
 article {
     @include flex(100%, auto, start, center);
+    min-height: 800px;
 }
 
 .text-wrapper {
@@ -178,6 +104,7 @@ section ul li p.active{
 
 .img-wrapper {
     @include widthHeight(30%, 100vh);
+    min-height: 800px;
     overflow: hidden;
     display: none;
 }
@@ -186,3 +113,4 @@ section ul li p.active{
     @include widthHeight(100%, 100%);
     object-fit: cover;
 }
+

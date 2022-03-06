@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/EventStyle.css">
+    <link rel="stylesheet" href="./styles/MenuStyle.css">
     <link rel="stylesheet" href="./styles/mediaqueries/mediaqueries.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,7 @@
             </span>
         </div>
     </nav>
-    <button id="btnTopEvent" class="going-up">
+    <button id="btnTop" class="going-up">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
             </svg>
@@ -36,7 +37,7 @@
             <img src="./img/CSES-logo2.png" alt="">
             <ul class="list-group list-group-flush menu-list">
                 <li class="list-group-item item-activities" ><a href="./index.html">Accueil</a></li>
-                <li class="list-group-item item-about" ><a href="#">A Propos</a></li>
+                <li class="list-group-item item-about" ><a href="./about.html">A Propos</a></li>
                 <li class="list-group-item disabled item-buildings" ><a>Locaux</a></li>
                 <li class="list-group-item disabled item-subscribe" ><a>Adhésion</a></li>
                 <li class="list-group-item disabled item-caf" ><a>CAF</a></li>
@@ -105,8 +106,8 @@
                         </button>
                     </div>  
                     <div class="card-body mx-sm-5">
-                        <h2 class="card-title py-2">Tournois : Warhammer 40 000</h2>
-                        <p class="card-text">Bienvenue dans Warhammer 40,000, le passionnant hobby du jeu de guerre sur table! <br><br>
+                        <h2 class="card-title py-2">Tournoi : Warhammer 40 000</h2>
+                        <p class="card-text">Bienvenue dans Warhammer 40,000, le passionnant hobby du jeu de guerre sur table ! <br><br>
                         Le jeu a pour cadre les ténèbres d’un lointain futur, <br>
                         où de puissantes armées s’affrontent sur d’innombrables mondes déchirés par la guerre, <br> alors que l’Humanité fait face seule à la menace des hérétiques, <br>
                         des mutants et des extraterrestres.
@@ -182,15 +183,15 @@
                     <div class="card mb-4 mx-3" style="max-width: 18rem;">
                         <img class="card-img-top" src="./img/EventMagick.jpg" alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title">Tournois : Magic the Gathering</h5>
-                        <p class="card-text">Venez rencontrer et apprendre avec des joueurs expérimentés à jouer à un des plus célèbre jeux de carte tactique. <br> Tournois ouvert à tous !</p>
+                        <h5 class="card-title">Tournoi : Magic the Gathering</h5>
+                        <p class="card-text">Venez rencontrer et apprendre avec des joueurs expérimentés à jouer à un des plus célèbres jeux de cartes tactiques. <br> Tournoi ouvert à tous !</p>
                         </div>
                     </div>
                     <div class="card mb-4 mx-3" style="max-width: 18rem;">
                         <img class="card-img-top" src="./img/EventMario.jpg" alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title">Tournois : Mario Kart</h5>
-                        <p class="card-text">Affrontez vous et surtout amusez vous sur les routes du royaume Champignon et de bien d'autres endroits !</p>
+                        <h5 class="card-title">Tournoi : Mario Kart</h5>
+                        <p class="card-text">Affrontez-vous et surtout amusez-vous sur les routes du royaume Champignon et de bien d'autres endroits !</p>
                         </div>
                     </div>
                 </div>
@@ -200,6 +201,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="./scripts/scriptMenu.js"></script>
 <script src="./scripts/scriptEvents.js"></script>
 </body>
 </html>
