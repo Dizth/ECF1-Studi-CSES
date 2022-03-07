@@ -116,3 +116,13 @@ a, a:hover {
     color: #000000;
     text-decoration: none;
 }
+
+.social-wrapper {
+    @include flex(auto, auto, center, center);
+    flex-direction: column;
+    margin-top: 5rem;
+    & a svg {
+        margin: 10px;
+        @include widthHeight(6vw, 6vw);
+    }
+}

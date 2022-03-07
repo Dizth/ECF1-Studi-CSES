@@ -47,7 +47,7 @@ header {
 
 article {
     @include flex(100%, auto, start, center);
-    min-height: 800px;
+    min-height: 700px;
 }
 
 .text-wrapper {
@@ -104,7 +104,7 @@ section ul li p.active{
 
 .img-wrapper {
     @include widthHeight(30%, 100vh);
-    min-height: 800px;
+    min-height: 700px;
     overflow: hidden;
     display: none;
 }

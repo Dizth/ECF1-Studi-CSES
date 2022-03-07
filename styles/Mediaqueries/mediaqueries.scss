@@ -32,6 +32,14 @@
             @include font(2rem, 400);
         }
     }
+
+    .social-wrapper {
+        flex-direction: row;
+        & a svg {
+            @include widthHeight(38px, 38px);
+        }
+    }
+
 }
 
 @media screen and (min-width: 992px) {

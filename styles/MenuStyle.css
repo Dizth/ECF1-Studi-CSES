@@ -124,4 +124,19 @@ a, a:hover {
   text-decoration: none;
 }
 
+.social-wrapper {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.social-wrapper a svg {
+  margin: 10px;
+  width: 6vw;
+  height: 6vw;
+}
+
 /*# sourceMappingURL=MenuStyle.css.map */
