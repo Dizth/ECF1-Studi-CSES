@@ -133,6 +133,9 @@ a, a:hover {
   flex-direction: column;
   margin-top: 5rem;
 }
+.social-wrapper a {
+  margin: 10px;
+}
 .social-wrapper a svg {
   margin: 10px;
   width: 6vw;

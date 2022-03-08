@@ -12,6 +12,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;700&display=swap" rel="stylesheet">
     <title>CSES - Événements</title>
+
+    <!-- Balisage JSON-LD généré par l'outil d'aide au balisage de données structurées de Google -->
+    <script type="application/ld+json">
+    [ {
+      "@context" : "http://schema.org",
+      "@type" : "Event",
+      "name" : "Tournoi : Warhammer 40 000",
+      "startDate" : "2022-06-26",
+      "location" : {
+        "@type" : "Place",
+        "name" : "Locaux du Centre social Est Somme de Ham",
+        "address" : {
+          "@type" : "PostalAddress",
+          "streetAddress" : "12 rue Louis Braille",
+          "addressLocality" : "HAM",
+          "postalCode" : "80400"
+        }
+      },
+      "description" : "Bienvenue dans Warhammer 40,000, le passionnant hobby du jeu de guerre sur table ! <BR/><BR/>\n                        Le jeu a pour cadre les ténèbres d’un lointain futur, <BR/>\n                        où de puissantes armées s’affrontent sur d’innombrables mondes déchirés par la guerre, <BR/> alors que l’Humanité fait face seule à la menace des hérétiques, <BR/>\n                        des mutants et des extraterrestres"
+    }, {
+      "@context" : "http://schema.org",
+      "@type" : "Event",
+      "name" : "Représentation : Danse moderne",
+      "description" : "Un spectacle de danse moderne qui émerveillera petits et grands."
+    }, {
+      "@context" : "http://schema.org",
+      "@type" : "Event",
+      "name" : "Tournoi : Magic the Gathering",
+      "description" : "Venez rencontrer et apprendre avec des joueurs expérimentés à jouer à un des plus célèbres jeux de cartes tactiques. <BR/> Tournoi ouvert à tous"
+    }, {
+      "@context" : "http://schema.org",
+      "@type" : "Event",
+      "name" : "Tournoi : Mario Kart",
+      "description" : "Affrontez-vous et surtout amusez-vous sur les routes du royaume Champignon et de bien d&#39;autres endroits"
+    } ]
+    </script>
 </head>
 <body>
     <nav>
@@ -63,43 +99,6 @@
         </div>
     </div>
     <main>
-        <div class="modal fade" id="subscribeEvnt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="inputEmail">Email</label>
-                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputSurname">Nom</label>
-                        <input type="text" class="form-control" id="inputSurname" placeholder="Entrez votre nom">
-                    </div>
-                    <div class="form-group">
-                        <label for="input">Prénom</label>
-                        <input type="text" class="form-control" id="inputName" placeholder="Entrez votre prénom">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputTel">Téléphone</label>
-                        <input type="tel" class="form-control" id="inputTel" placeholder="Entrez votre numéro de téléphone">
-                    </div>                    
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                <button type="button" class="btn btn-primary">Valider</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <section class="row justify-content-center no-gutters my-4">
             <div class="col-11 col-lg-10 bg-color-title">  
                 <h1 class="my-4 ml-sm-5">
@@ -214,6 +213,42 @@
                 </div>
             </div>
         </section>
+        <div class="modal fade" id="subscribeEvnt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                      <div class="form-group">
+                          <label for="inputEmail">Email</label>
+                          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
+                      </div>
+                      <div class="form-group">
+                          <label for="inputSurname">Nom</label>
+                          <input type="text" class="form-control" id="inputSurname" placeholder="Entrez votre nom">
+                      </div>
+                      <div class="form-group">
+                          <label for="input">Prénom</label>
+                          <input type="text" class="form-control" id="inputName" placeholder="Entrez votre prénom">
+                      </div>
+                      <div class="form-group">
+                          <label for="inputTel">Téléphone</label>
+                          <input type="tel" class="form-control" id="inputTel" placeholder="Entrez votre numéro de téléphone">
+                      </div>                    
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                  <button type="button" class="btn btn-primary">Valider</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </main>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

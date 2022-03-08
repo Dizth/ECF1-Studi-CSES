@@ -220,6 +220,11 @@ section .second {
   background-color: #3d6d79;
 }
 
+.time-info {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 video {
   display: none;
 }

@@ -191,6 +191,10 @@ section {
     }
 }
 
+.time-info {
+    @include font(0.8rem, 600);
+}
+
 video {
     display: none;
 }

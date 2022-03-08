@@ -48,11 +48,12 @@ header {
 article {
     @include flex(100%, auto, start, center);
     min-height: 700px;
+    overflow: hidden;
 }
 
 .text-wrapper {
     @include flex(100%, 100%, center, center);
-    padding: 100px 50px;
+    padding: 100px 50px 50px 50px;
     background-color: $mainColor;
     position: relative;
 
@@ -86,20 +87,46 @@ section ul li {
     &:last-child > p {
         color: $gold;
         font-size: 1.2rem;
-        margin-top: 36px;
     }
 }
 
-ul li p {
-    line-height: 1.5rem;
-    font-size: 1.2rem;
-    transform: translateY(200%);
-    color: $navColor;
+ul li {
+    & p {
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+        transform: translateY(200%);
+        color: $navColor;
+    }
+    & button {
+        transform: translateY(200%);
+    }
 }
 
-section ul li p.active{
+.btn-time-wrapper {
+    padding: 1.5rem;
+    & .btn-time {
+        @include widthHeight(100px, 100px);
+        border: 2px $bodyColor solid;
+        background-color: transparent;
+        border-radius: 50%;
+        float: right;
+        color: $navColor;
+        transition: border 250ms ease-out;
+        &:hover {
+            border: 2px $gold solid;
+            transition: border 150ms ease-in;
+        }
+    }
+}
+
+
+.open-times > p{
+    @include font(0.8rem, 600);
+}
+
+ul li .active{
     transform: translateY(0%);
-    transition: 1s ease-out;
+    transition: transform 1s ease-out;
 }
 
 .img-wrapper {
@@ -107,10 +134,8 @@ section ul li p.active{
     min-height: 700px;
     overflow: hidden;
     display: none;
+    & > img {
+        @include widthHeight(100%, 100%);
+        object-fit: cover;
+    }
 }
-
-.img-wrapper > img {
-    @include widthHeight(100%, 100%);
-    object-fit: cover;
-}
-

@@ -121,6 +121,9 @@ a, a:hover {
     @include flex(auto, auto, center, center);
     flex-direction: column;
     margin-top: 5rem;
+    & a {
+        margin: 10px;
+    }
     & a svg {
         margin: 10px;
         @include widthHeight(6vw, 6vw);

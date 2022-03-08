@@ -130,7 +130,11 @@
 
   .text-wrapper {
     width: 70%;
-    padding: 5vw;
+    padding: 100px 100px 50px 50px;
+  }
+
+  .btn-time > button {
+    float: left;
   }
 
   section ul li:last-child {
