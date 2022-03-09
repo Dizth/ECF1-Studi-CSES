@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informations générales sur votre Centre social Est Somme.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/AboutStyle.css">
     <link rel="stylesheet" href="./styles/MenuStyle.css">
@@ -12,6 +13,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;700&display=swap" rel="stylesheet">
     <title>CSES - A propos</title>
+
+    <!-- Balisage JSON-LD généré par l'outil d'aide au balisage de données structurées de Google -->
+    <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "LocalBusiness",
+      "name" : "Centre Social",
+      "telephone" : "03 22 37 00 22",
+      "email" : "accueil@centresocialestsomme.fr",
+      "address" : {
+        "@type" : "PostalAddress",
+        "streetAddress" : "12 rue Louis Braille",
+        "addressLocality" : "HAM",
+        "addressRegion" : "territoire de la communauté de Communes de l'Est de la Somme",
+        "postalCode" : "80400"
+      },
+      "openingHoursSpecification" : {
+        "@type" : "OpeningHoursSpecification",
+        "dayOfWeek" : {
+          "@type" : "DayOfWeek",
+          "name" : "Horaires"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
     <nav>
@@ -32,7 +58,9 @@
             </svg>
     </button>
     <div class="menu-container" id="menuContainer">
-        <div class="outside-menu" id="outsideMenu"></div>
+        <div class="outside-menu" id="outsideMenu">
+
+        </div>
         <div class="menu-wrapper" id="menuWrapper">
             <img src="./img/CSES-logo2.png" alt="">
             <ul class="list-group list-group-flush menu-list">
@@ -72,30 +100,37 @@
     <main>
         <article>
             <section class="text-wrapper">
-                <ul id="textReveal">
+                <ul class="text-reveal">
                     <li>
                         <p>
-                            Parents, ados, seniors, familles, enfants, le Centre Social propose
-                            des activités pour tous et pour tous les goûts ! 
+                            Parents, ados, seniors, familles, enfants, <strong>le Centre Social propose
+                            des activités pour tous et pour tous les goûts !</strong> <br>
                             Avec quelques nouveautés en cette nouvelle rentrée :
                         </p>
                     </li>
                     <li>
                         <p>
-                            FabLab (création d'objets grâce aux imprimantes 3D et ateliers de fabrication),
-                            Musique assistée par ordinateur, atelier d'écriture, plate-forme Bip Pop ...
+                            <em>FabLab (création d'objets grâce aux imprimantes 3D et ateliers de fabrication),
+                            Musique assistée par ordinateur, atelier d'écriture, plate-forme Bip Pop ...</em>
                         </p>
                     </li>
                     <li>
                         <p>
-                            Avec plus de 800 adhérents et 50.000 visiteurs par an, le centre social est le lieu
-                            d'animation incontournable du territoire de la communauté de Communes de l'Est de la Somme ! 
+                            <strong>Avec plus de 800 adhérents et 50.000 visiteurs par an</strong>, <em>le centre social est le lieu
+                            d'animation incontournable du territoire de la communauté de Communes de l'Est de la Somme !</em>
                         </p>
                     </li>
+                    <li class="btn-time-wrapper">
+                        <button class="btn-time" type="button" data-toggle="modal" data-target="#openingTime">
+                            Horaires
+                        </button>
+                    </li>
+                </ul>
+                <ul class="text-reveal">
                     <li>
                         <p>
-                            Un lieu de vie au service de la population, qu'il s'agisse d'accompagner les personnes dans
-                            l'utilisation des outils numériques, de faciliter leur accès au droit (CAF, CPAM ...).
+                            <em>Un lieu de vie au service de la population, qu'il s'agisse d'accompagner les personnes dans
+                            l'utilisation des outils numériques, de faciliter leur accès au droit (CAF, CPAM ...).</em>
                         </p>
                     </li>
                     <li>
@@ -113,19 +148,16 @@
                         </p>
                     </li>
                     <li>
-                        <p>
-                            Adresse : 12 rue Louis Braille 80400 HAM.
+                        <p class="small-info">
+                            Adresse : 12 rue Louis Braille 80400 HAM. <br>
+                            Tel : 03 22 37 00 22. <br>
+                            E-mail : accueil@centresocialestsomme.fr
                         </p>
-                    </li>
-                    <li class="btn-time-wrapper">
-                        <button class="btn-time" type="button" data-toggle="modal" data-target="#openingTime">
-                            Horaires
-                        </button>
                     </li>
                     <li>
                         <p>
-                            Yann Aquaire, <br>
-                            Président du Centre Social Est Somme.
+                            <em>Yann Aquaire, <br>
+                            Président du Centre Social Est Somme.</em>
                         </p>
                     </li>
                 </ul>
@@ -137,6 +169,7 @@
                 <img src="./img/CSES2cut.jpg" alt="">
             </section>
         </article>
+
         <div class="modal fade" id="openingTime" tabindex="-1" role="dialog" aria-labelledby="openingTime" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">

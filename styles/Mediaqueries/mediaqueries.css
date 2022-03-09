@@ -117,28 +117,9 @@
     width: 80%;
     border-radius: 5px;
   }
-  .main-container .side-cover .placeholder {
-    width: 90px;
-    height: 90px;
-    background-size: contain;
-    background-image: url(/img/play.png);
-  }
 
   article {
     height: 100vh;
-  }
-
-  .text-wrapper {
-    width: 70%;
-    padding: 100px 100px 50px 50px;
-  }
-
-  .btn-time > button {
-    float: left;
-  }
-
-  section ul li:last-child {
-    justify-content: end;
   }
 
   .img-wrapper {
@@ -152,6 +133,21 @@
 
   header > div > h1 {
     font-size: 2.5rem;
+  }
+
+  .text-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+    width: 70%;
+    padding: 0;
+  }
+  .text-wrapper ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 50px 3.5vw;
+  }
+  .text-wrapper ul:first-of-type {
+    border-right: 2px #f1e3d3 solid;
   }
 }
 

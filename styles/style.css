@@ -166,9 +166,9 @@ main {
 .rounded-img div {
   width: 50vw;
   height: 50vw;
-  border-radius: 50%;
   max-width: 300px;
   max-height: 300px;
+  border-radius: 50%;
 }
 .rounded-img .cooking-img {
   background: center/cover no-repeat url(../img/cuisine.jpg);
@@ -222,7 +222,7 @@ section .second {
 
 .time-info {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 video {

@@ -9,42 +9,26 @@ header {
         background-color: $gold;
         border-radius: 50%;
         position: relative;
-        max-width: 31rem;
-        max-height: 31rem;
+        @include maxWidthHeight(31rem, 31rem);
         & h1 {
             @include font(4vw, 500);
         }
     }
     & div::before {
-        content: "";
-        @include flex(10vw, 10vw, center, center);
-        min-width: 70px;
-        min-height: 70px;
-        max-width: 120px;
-        max-height: 120px;
+        @extend %aboutBall;
         background-color: $mainColor;
-        border-radius: 50%;
-        position: absolute;
         top: -150px;
         right: 0;
     }
     & div::after {
-        content: "";
-        @include flex(10vw, 10vw, center, center);
-        min-width: 70px;
-        min-height: 70px;
-        max-width: 120px;
-        max-height: 120px;
+        @extend %aboutBall;
         background-color: $mainColor;
-        border-radius: 50%;
-        position: absolute;
         bottom: -150px;
         left: 0;
     }
 }
 
 //main
-
 article {
     @include flex(100%, auto, start, center);
     min-height: 700px;
@@ -53,6 +37,7 @@ article {
 
 .text-wrapper {
     @include flex(100%, 100%, center, center);
+    flex-direction: column;
     padding: 100px 50px 50px 50px;
     background-color: $mainColor;
     position: relative;
@@ -60,7 +45,7 @@ article {
 }
 
 .ball {
-    @include flex(150px, 150px, center, center);
+    @include widthHeight(150px, 150px);
     background-color: $bodyColor;
     border-radius: 50%;
     position: absolute;
@@ -70,30 +55,34 @@ article {
     transition: opacity 250ms ease-in;
 }
 
-section ul {
+.text-wrapper ul {
     width: 100%;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    padding: 0;
+    justify-content: space-evenly;
 }
 
-section ul li {
+.text-wrapper ul li {
     height: auto;
     overflow: hidden;
+    & .small-info {
+        @include font(0.8rem, 500)
+    }
     &:last-child {
-        display: flex;
-        justify-content: start;
+        margin-top: 32px;
     }
     &:last-child > p {
         color: $gold;
         font-size: 1.2rem;
+        float: right;
     }
 }
 
 ul li {
     & p {
         line-height: 1.5rem;
-        font-size: 1.2rem;
+        @include font(1.2rem, 400);
         transform: translateY(200%);
         color: $navColor;
     }
@@ -102,31 +91,35 @@ ul li {
     }
 }
 
+em {
+    font-style: normal;
+}
+
 .btn-time-wrapper {
+    text-align: center;
     padding: 1.5rem;
+    list-style: none;
     & .btn-time {
         @include widthHeight(100px, 100px);
         border: 2px $bodyColor solid;
         background-color: transparent;
         border-radius: 50%;
-        float: right;
         color: $navColor;
-        transition: border 250ms ease-out;
-        &:hover {
-            border: 2px $gold solid;
-            transition: border 150ms ease-in;
-        }
     }
-}
-
-
-.open-times > p{
-    @include font(0.8rem, 600);
 }
 
 ul li .active{
     transform: translateY(0%);
     transition: transform 1s ease-out;
+}
+
+.activeBtn {
+    transform: translateY(0%);
+    transition: transform 1s ease-out, border 150ms ease-in;;
+    &:hover {
+        border: 2px $gold solid;
+        transition: border 150ms ease-in;
+    }
 }
 
 .img-wrapper {

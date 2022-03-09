@@ -51,8 +51,7 @@ main {
     & .container-width > div > a {
             border-radius: 50%;
             @include widthHeight(13vw, 13vw);
-            max-width: 100px;
-            max-height: 100px;
+            @include maxWidthHeight(100px, 100px);
     }
     & .container-width {
         position: relative;
@@ -61,8 +60,7 @@ main {
 
 .grid-item {
     @include flex(16vw, 16vw, center, center);
-    max-width: 100px;
-    max-height: 100px;
+    @include maxWidthHeight(100px, 100px);
     background-color: $navColor;
     position: relative;
     & img {
@@ -130,9 +128,8 @@ main {
     @include flex(100%, 100%, center, center);
     & div {
         @include widthHeight(50vw, 50vw);
+        @include maxWidthHeight(300px, 300px);
         border-radius: 50%;
-        max-width: 300px;
-        max-height: 300px;
     }
     & .cooking-img {
         background: center / cover no-repeat url(../img/cuisine.jpg);
@@ -192,7 +189,7 @@ section {
 }
 
 .time-info {
-    @include font(0.8rem, 600);
+    @include font(0.8rem, 500);
 }
 
 video {
