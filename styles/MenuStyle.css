@@ -72,7 +72,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items: none;
+  align-items: initial;
   transition: height 500ms ease;
   z-index: 2;
 }
@@ -93,6 +93,9 @@ nav {
   opacity: 0;
   transition: transform 250ms ease-in, opacity 250ms ease-in;
   max-width: 376px;
+  overflow: auto;
+  scrollbar-color: #000000 #7a7878;
+  scrollbar-width: thin;
 }
 .menu-container .menu-wrapper img {
   width: 100%;
@@ -115,10 +118,6 @@ nav {
   font-weight: 500;
 }
 
-.left {
-  width: 100%;
-}
-
 a, a:hover {
   color: #000000;
   text-decoration: none;
@@ -130,16 +129,15 @@ a, a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-top: 5rem;
+  flex-direction: row;
+  margin-top: 5vh;
 }
 .social-wrapper a {
-  margin: 10px;
+  margin: 5%;
 }
 .social-wrapper a svg {
-  margin: 10px;
-  width: 6vw;
-  height: 6vw;
+  width: 5.5vw;
+  height: 5.5vw;
 }
 
 /*# sourceMappingURL=MenuStyle.css.map */

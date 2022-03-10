@@ -63,7 +63,7 @@ nav {
 
 .menu-container {
     position: fixed;
-    @include flex(100%, 0%, flex-end, none);
+    @include flex(100%, 0%, flex-end, initial);
     transition: height 500ms ease;
     z-index: 2;
 
@@ -84,6 +84,9 @@ nav {
         opacity: 0;
         transition: transform 250ms ease-in, opacity 250ms ease-in;
         max-width: 376px;
+        overflow: auto;
+        scrollbar-color: #000000 #7a7878; //Mozilla only
+        scrollbar-width: thin; //Mozilla only
         & img {
             width: 100%;
             max-width: 202px;
@@ -108,10 +111,6 @@ nav {
     @include font(5vw, 500);
 }
 
-.left {
-    width: 100%;
-}
-
 a, a:hover {
     color: #000000;
     text-decoration: none;
@@ -119,13 +118,12 @@ a, a:hover {
 
 .social-wrapper {
     @include flex(auto, auto, center, center);
-    flex-direction: column;
-    margin-top: 5rem;
+    flex-direction: row;
+    margin-top: 5vh;
     & a {
-        margin: 10px;
+        margin: 5%;
     }
     & a svg {
-        margin: 10px;
-        @include widthHeight(6vw, 6vw);
+        @include widthHeight(5.5vw, 5.5vw);
     }
 }

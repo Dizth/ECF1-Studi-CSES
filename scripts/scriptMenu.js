@@ -16,8 +16,10 @@ btnMenu.addEventListener('click', (e) =>  {
     outsideMenu.classList.toggle('displayOutside')
     if (menuWrapper.classList[1] === 'displayMenu') {
         menuContainer.style.height = '100%'
+        document.body.style.overflow = 'hidden'
     } else {
         menuContainer.style.height = '0%'
+        document.body.style.overflow = 'visible'
     }
 })
 

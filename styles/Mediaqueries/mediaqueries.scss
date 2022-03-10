@@ -33,9 +33,9 @@
         }
     }
 
-    .social-wrapper {
-        flex-direction: row;
-        & a svg {
+    .social-wrapper > a{
+        margin: 20px;
+        & svg {
             @include widthHeight(38px, 38px);
         }
     }
