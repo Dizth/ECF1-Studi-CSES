@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon/CSES-logo.png" type="image/png">
     <title>CSES - Accueil</title>
 
     <!-- Balisage JSON-LD généré par l'outil d'aide au balisage de données structurées de Google -->
@@ -222,9 +223,11 @@
                 <a href="/index.html"><img  src="./img/CSES-logo.png" alt=""></a>
             </span>
             <span class="btn-menu-wrapper">
-                <button class="btn-menu" id="menuButton"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="50" fill="currentColor" class="bi bi-three-dots-vertical " viewBox="0 0 16 16">
+                <button class="btn-menu" id="menuButton">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="50" fill="currentColor" class="bi bi-three-dots-vertical " viewBox="0 0 16 16">
                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                </svg></button>
+                  </svg>
+                </button>
             </span>
         </div>
     </nav>
@@ -269,7 +272,7 @@
             <h1>CSES</h1>
             <span>Centre social Est Somme</span>
             <span>Ville de </span>
-            <div class="ball-container">
+            <div class="ball-shortcut second">
 
             </div>
         </div>
@@ -281,7 +284,7 @@
                     <h2>Choisissez une activité :</h2>
                 </div>
                 <div class="pt-3 mt-3">
-                    <div class="justify-content-center d-flex col-12">
+                    <div class="justify-content-center d-flex">
                         <a href="#cakeCard" id="btnCooking" class="m-4">
                             <div role="button" class="grid-item cooking rounded-circle">
                                 <img src="./svg/cake-svgrepo-com.svg" alt="">
@@ -299,7 +302,7 @@
                         </a>
                     </div>
 
-                    <div class="justify-content-center d-flex col-12">
+                    <div class="justify-content-center d-flex">
                         <a href="#fablabCard" id="btnFablab" class="m-4">
                             <div role="button" class="grid-item fablab rounded-circle">                               
                                 <img src="./svg/machinery-svgrepo-com.svg" alt="">
@@ -317,7 +320,7 @@
                         </a>
                     </div>
 
-                    <div class="justify-content-center d-flex col-12">
+                    <div class="justify-content-center d-flex">
                         <a href="#musicCard" id="btnMusic" class="m-4">
                             <div role="button" class="grid-item music rounded-circle">
                                 <img src="./svg/music-svgrepo-com.svg" alt="">
@@ -353,14 +356,14 @@
             </div>
         </section>
         <section id="cakeCard">
-            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+            <div class="card mx-4 bg-transparent border-0 card-resize">
                 <div class="rounded-img">
                     <div class="cooking-img">
 
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title text-center">Cuisine</h5>
+                    <h3 class="card-title text-center">Cuisine</h3>
                     <p class="card-text">Venez réaliser vos plats préférés ! </p>
                     <p class="time-info">Le Vendredi de 14h à 17h. (selon planning)</p>
                     <button type="button" class="btn float-right btn-outline-dark" data-toggle="modal" data-target="#subscribe">
@@ -373,14 +376,14 @@
             </div>
         </section>
         <section id="chessCard">
-            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+            <div class="card mx-4 bg-transparent border-0 card-resize">
                 <div class="rounded-img">
                     <div class="chess-img">
 
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Club d'Echecs</h5>
+                    <h3 class="card-title text-center">Club d'Echecs</h3>
                     <p class="card-text">Echec et mat ! Venez travailler vos stratégies tout en vous amusant.</p>
                     <p class="time-info">Le Samedi de 14h à 15h30.</p>
                     <button type="button" class="btn float-right btn-outline-light" data-toggle="modal" data-target="#subscribe">
@@ -393,14 +396,14 @@
             </div>
         </section>
          <section id="danceCard">
-            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+            <div class="card mx-4 bg-transparent border-0 card-resize">
                 <div class="rounded-img">
                     <div class="dance-img">
 
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title" >Danse</h5>
+                    <h3 class="card-title text-center" >Danse</h3>
                     <p class="card-text">Les cours de danse n'attendent que vous !</p>
                     <p class="time-info">
                         Danse Classique (6-8 ans): Mercredi de 14h à 15h, <br>
@@ -417,14 +420,14 @@
             </div>
         </section>
         <section id="fablabCard">
-            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+            <div class="card mx-4 bg-transparent border-0 card-resize">
                 <div class="rounded-img">
                     <div class="fablab-img">
 
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">FabLab</h5>
+                    <h3 class="card-title text-center">FabLab</h3>
                     <p class="card-text">Venez réaliser de superbes créations dans un atelier à la pointe de la technologie.</p>
                     <p class="time-info">
                         Le Lundi de 9h30 à 20h, <br>
@@ -440,14 +443,14 @@
             </div>
         </section>
         <section id="sewingCard">
-            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+            <div class="card mx-4 bg-transparent border-0 card-resize">
                 <div class="rounded-img">
                     <div class="sewing-img">
 
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Couture</h5>
+                    <h3 class="card-title text-center">Couture</h3>
                     <p class="card-text">Les cours de coutures vous apporteront toutes les connaissances nécessaires pour réaliser les pièces de votre choix.</p>
                     <p class="time-info">
                         Le Lundi de 14h à 19h, <br>
@@ -463,14 +466,14 @@
             </div>
         </section>
         <section id="potteryCard">
-            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+            <div class="card mx-4 bg-transparent border-0 card-resize">
                 <div class="rounded-img">
                     <div class="pottery-img">
 
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Poterie</h5>
+                    <h3 class="card-title text-center">Poterie</h3>
                     <p class="card-text">Sculptez vos envies grace aux cours de poterie !</p>
                     <p class="time-info">
                         Le Mardi de 14h à 16h30.
@@ -485,14 +488,14 @@
             </div>
         </section>
         <section id="musicCard">
-            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+            <div class="card mx-4 bg-transparent border-0 card-resize">
                 <div class="rounded-img">
                     <div class="music-img">
 
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Musique</h5>
+                    <h3 class="card-title text-center">Musique</h3>
                     <p class="card-text">Composer, créer, jouer, devenez musiciens grace aux cours de guitare et de MAO (musique assistée par ordinateur).</p>
                     <p class="time-info">
                         Cours de Guitare: Mercredi de 14h à 18h, <br> 
@@ -508,14 +511,14 @@
                 
             </div>
         </section><section id="ludoCard">
-            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+            <div class="card mx-4 bg-transparent border-0 card-resize">
                 <div class="rounded-img">
                     <div class="ludo-img">
 
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Ludothèque</h5>
+                    <h3 class="card-title text-center">Ludothèque</h3>
                     <p class="card-text">Découvrir et s'amuser, des tonnes de jeux sont à disposition pour le plus grand plaisir des enfants.</p>
                     <p class="time-info">
                         Le Mercredi de 9h à 12h et de 13h30 à 18h, <br>
@@ -532,14 +535,14 @@
             </div>
         </section>
         <section id="infoCard">
-            <div class="card mx-4 bg-transparent border-0" style="width: 100%; max-width: 380px;">
+            <div class="card mx-4 bg-transparent border-0 card-resize">
                 <div class="rounded-img">
                     <div class="info-img">
                         
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Informatique</h5>
+                    <h3 class="card-title text-center">Informatique</h3>
                     <p class="card-text">Apprenez les rudiments de l'informatique de manière ludique, les ordinateurs n'auront plus de secret pour vous ! </p>
                     <p class="time-info">
                         Le Mardi, <br> Mercredi et Vendredi de 9h à 12h et de 14h à 18h, <br>
@@ -553,52 +556,52 @@
         </section>
         <div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Inscription</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Inscription</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputEmail">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSurname">Nom</label>
+                                <input type="text" class="form-control" id="inputSurname" placeholder="Entrez votre nom">
+                            </div>
+                            <div class="form-group">
+                                <label for="input">Prénom</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Entrez votre prénom">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTel">Téléphone</label>
+                                <input type="tel" class="form-control" id="inputTel" placeholder="Entrez votre numéro de téléphone">
+                            </div>
+                            <label for="select">Sélectionnez votre activité</label>
+                            <select class="form-control">
+                                <option>Cuisine</option>
+                                <option>Échecs</option>
+                                <option>Danse</option>
+                                <option>FabLab</option>
+                                <option>Couture</option>
+                                <option>Poterie</option>
+                                <option>Musique</option>
+                                <option>Ludothèque</option>
+                                <option>Informatique</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-primary">Valider</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="inputEmail">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputSurname">Nom</label>
-                            <input type="text" class="form-control" id="inputSurname" placeholder="Entrez votre nom">
-                        </div>
-                        <div class="form-group">
-                            <label for="input">Prénom</label>
-                            <input type="text" class="form-control" id="inputName" placeholder="Entrez votre prénom">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputTel">Téléphone</label>
-                            <input type="tel" class="form-control" id="inputTel" placeholder="Entrez votre numéro de téléphone">
-                        </div>
-                        <label for="select">Sélectionnez votre activité</label>
-                        <select class="form-control">
-                            <option>Cuisine</option>
-                            <option>Échecs</option>
-                            <option>Danse</option>
-                            <option>FabLab</option>
-                            <option>Couture</option>
-                            <option>Poterie</option>
-                            <option>Musique</option>
-                            <option>Ludothèque</option>
-                            <option>Informatique</option>
-                        </select>
-                    </form>
-                </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                <button type="button" class="btn btn-primary">Valider</button>
             </div>
         </div>
-        </div>
-    </div>
     </main>
     
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

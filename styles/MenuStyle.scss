@@ -12,16 +12,21 @@ body {
 }
 
 nav {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2;
+}
+
+a, a:hover {
+    color: #000000;
+    text-decoration: none;
 }
 
 .going-up {
     position: fixed;
     bottom: 15px;
     left: 0;
-    z-index: 3;
+    z-index: 2;
     color: #000000;
     opacity: 0.7;
     transition: opacity 250ms ease-in;
@@ -35,16 +40,15 @@ nav {
 }
 
 .span-wrapper {
-    @include flex(100%, auto, space-between, center);
+    @include flex(100vw, auto, space-between, center);
     background-color: $navColor;
     padding: 5px 0 5px 0;
     transition: background-color 250ms ease-in;
     & .logo{
-        margin: 0 30px 0 10px;
+        margin-left: 10px;
     }
     & .btn-menu-wrapper {
-        margin-left: auto;
-        padding-right: 10px;
+        margin-right: 4.2vw;
         & .btn-menu {
             width: 100%;
             background-color: transparent;
@@ -54,7 +58,6 @@ nav {
             transition: opacity 250ms ease-in;
         }
     }
-
     & .btn-menu-wrapper > .btn-menu:hover {
         opacity: 1;
         transition: opacity 250ms ease-in;
@@ -63,30 +66,32 @@ nav {
 
 .menu-container {
     position: fixed;
-    @include flex(100%, 0%, flex-end, initial);
-    transition: height 500ms ease;
+    @include flex(100%, 0vh, initial, initial);
+    top: 62px;
     z-index: 2;
-
     & .outside-menu {
         height: 100vh;
         flex: 1;
         background-color:rgba( #000000, 0.5);
         opacity: 0;
         transform: translateX(-100%);
-        transition: width 250ms ease-in, opacity 250ms ease-in, transform 250ms ease-in;
+        transition: opacity 250ms ease-in, transform 250ms ease-in;
     }
-    
     & .menu-wrapper {
-        @include widthHeight(50%, 100vh);
+        @include flex(50%, 100vh, flex-start, center);
+        flex-direction: column;
         text-align: center;
+        max-width: 376px;
         background-color: $navColor;
         transform: translateX(100%);
         opacity: 0;
         transition: transform 250ms ease-in, opacity 250ms ease-in;
-        max-width: 376px;
         overflow: auto;
-        scrollbar-color: #000000 #7a7878; //Mozilla only
-        scrollbar-width: thin; //Mozilla only
+        scrollbar-width: none; //Moz
+        -ms-overflow-style: none; //IE 10+
+        &::-webkit-scrollbar { //Chrome, Opera, Safari ...
+            display: none;
+        }
         & img {
             width: 100%;
             max-width: 202px;
@@ -95,35 +100,30 @@ nav {
     }
 
     .displayMenu {
-        transform: translateX(0%);
         opacity: 1;
+        transform: translateX(0%);
         transition: transform 250ms ease-in, opacity 250ms ease-in;
     }
-    
-    .displayOutside {
-        opacity: 1;
-        transform: translateX(0%);
-        transition: width 250ms ease-in, opacity 250ms ease-in, transform 250ms ease-in;
+}
+
+.menu-list {
+    width: 100%;
+    & li {
+        @include font(5vw, 500);
     }
-}
-
-.menu-list > li{
-    @include font(5vw, 500);
-}
-
-a, a:hover {
-    color: #000000;
-    text-decoration: none;
 }
 
 .social-wrapper {
-    @include flex(auto, auto, center, center);
-    flex-direction: row;
-    margin-top: 5vh;
+    @include flex(100%, auto, flex-start, center);
+        flex-direction: column;
+        min-height: 300px;
     & a {
-        margin: 5%;
+        width: auto;
+        margin: 2.3vh;
     }
     & a svg {
-        @include widthHeight(5.5vw, 5.5vw);
+        @include widthHeight(5.1vw, 5.1vw);
+        min-height: 20px;
+        min-width: 20px;
     }
 }

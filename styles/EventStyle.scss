@@ -1,12 +1,17 @@
 @use "./SASS" as *;
 
 //main page
+section:first-of-type {
+    margin-top: calc(1.5rem + 62px);
+    margin-bottom: 1.5rem;
+}
+
 .rounded-heart {
     @include flex(70px, 70px, center, center);
     background-color: $navColor;
+    position: absolute;
     right: -15px;
     bottom: -35px;
-    position: absolute;
     border-radius: 50%;
     border: 1px solid rgba(0,0,0,.125);
     & .show {
@@ -19,11 +24,6 @@
 
 textarea {
     resize: none;
-}
-
-section form:last-child {
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
 }
 
 .bg-color-title {

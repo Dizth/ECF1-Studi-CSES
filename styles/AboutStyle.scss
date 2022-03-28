@@ -2,25 +2,27 @@
 
 //header
 header {
-    @include flex(100%, calc(100vh - 62px), center, center);
-    min-height: 800px;
-    & div {
+    @include flex(100%, 100vh, center, center);
+    min-height: 862px;
+    & .bubble {
         @include flex(50vw, 50vw, center, center);
+        @include maxWidthHeight(31rem, 31rem);
+        margin-top: 62px;
         background-color: $gold;
         border-radius: 50%;
         position: relative;
-        @include maxWidthHeight(31rem, 31rem);
+        transition: margin-top 250ms ease-in;
         & h1 {
             @include font(4vw, 500);
         }
     }
-    & div::before {
+    & .bubble::before {
         @extend %aboutBall;
         background-color: $mainColor;
         top: -150px;
         right: 0;
     }
-    & div::after {
+    & .bubble::after {
         @extend %aboutBall;
         background-color: $mainColor;
         bottom: -150px;
@@ -32,7 +34,6 @@ header {
 article {
     @include flex(100%, auto, start, center);
     min-height: 700px;
-    overflow: hidden;
 }
 
 .text-wrapper {
@@ -64,7 +65,6 @@ article {
 }
 
 .text-wrapper ul li {
-    height: auto;
     overflow: hidden;
     & .small-info {
         @include font(0.8rem, 500)
@@ -125,7 +125,6 @@ ul li .active{
 .img-wrapper {
     @include widthHeight(30%, 100vh);
     min-height: 700px;
-    overflow: hidden;
     display: none;
     & > img {
         @include widthHeight(100%, 100%);

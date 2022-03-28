@@ -1,17 +1,16 @@
 @use "../SASS" as *;
 
 @media screen and (min-width: 540px) {
-    .bg-color-title > h1, h2 {
+    .bg-color-title > h1, h2 { //Event Page
         @include font(2.5rem, 500)
+    }
+
+    .span-wrapper > .btn-menu-wrapper { //menu
+        margin-right: 25px;
     }
 }
 
-@media screen and (max-height: 700px) {
-    .ball-container {
-        opacity: 0;
-        transition: opacity 250ms ease-in;
-    }
-    
+@media screen and (max-height: 700px) { //header(index)
     .ball-shortcut {
         opacity: 0;
         transition: opacity 250ms ease-in;
@@ -19,12 +18,11 @@
 }
 
 @media screen and (min-width: 768px) {
-
-    .menu-list > li{
+    .menu-list > li{ //menu
         @include font(2.5rem, 500);
     }
 
-    .header-container {
+    .header-container { //header(index)
         & h1 {
             @include font(10rem, 700);
         }
@@ -33,7 +31,7 @@
         }
     }
 
-    .social-wrapper > a{
+    .social-wrapper > a { // menu
         margin: 20px;
         & svg {
             @include widthHeight(38px, 38px);
@@ -42,8 +40,7 @@
 }
 
 @media screen and (min-width: 992px) {
-
-    .menu-list > li{
+    .menu-list > li{ //menu
         transition: background-color 200ms ease-in;
         &::before {
             content: '';
@@ -52,7 +49,6 @@
             position: absolute;
             left: 0;
             bottom: 10px;
-            z-index: 2;
             transition: width 250ms ease-in, background-color 200ms ease-in;
         }
         &:hover::before {
@@ -69,7 +65,7 @@
         }
     }
     
-    .span-wrapper {
+    .span-wrapper { //menu
         background-color: transparent;
         transition: background-color 250ms ease-in, opacity 250ms ease-in;
         &:hover {
@@ -77,15 +73,18 @@
         }
     }
 
-    .displayColor {
+    .displayColor { //menu
         background-color: $navColor;
         transition: background-color 250ms ease-in;
     }
 
-    .grid-item {
+    .header-container > div.second { //header(index)
+        background-color: $bodyColor;
+    }
+
+    .grid-item { //main(index)
         transition: box-shadow 100ms ease-in;
         &::before {
-            position: absolute;
             top: 0px;
             opacity: 0;
         }
@@ -100,13 +99,9 @@
         }
     }
 
-    .main-container {
+    .main-container { //main(index)
         & .container-width {
             width: 50%;
-            & div > a {
-                border-radius: 50%;
-                @include widthHeight(100px, 100px)
-            }
         }
         & .side-cover {
             @include flex(50%, 100%, center, center);
@@ -132,9 +127,12 @@
         right: -75px;
     }
 
-    header > div > h1{
+    header > .bubble {
+        margin-top: 0;
+        transition: margin-top 250ms ease-in;
+        & h1{
             font-size: 2.5rem;
-    }
+    }   }
 
     .text-wrapper {
         flex-direction: row;

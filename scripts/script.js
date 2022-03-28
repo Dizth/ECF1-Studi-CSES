@@ -1,6 +1,5 @@
 //right page videos
 const sideCover = document.querySelector('.side-cover')
-const play = document.querySelector('.placeholder')
 const btnCooking = document.getElementById('btnCooking')
 const cookingVid = document.getElementById('cookingVid')
 const btnChess = document.getElementById('btnChess')
@@ -24,13 +23,11 @@ function displayVideo(video) {
     if (sideCover.clientWidth > 0) {
         video.style.display ='block'
         video.play()
-        play.style.display ='none'
     }
 }
 
 function hideVideo(video) {
     video.style.display ='none'
-    play.style.display ='block'
     video.pause()
 }
 

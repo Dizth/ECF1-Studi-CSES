@@ -1,11 +1,13 @@
-@charset "UTF-8";
-.header-container h1 {
-  width: 100%;
-  text-align: center;
+.ball-shortcut {
+  border-radius: 50%;
+  position: absolute;
+  bottom: -75px;
+  z-index: 1;
+  transition: opacity 250ms ease-in;
 }
 
 .header-container {
-  height: calc(100vh - 62px);
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -14,6 +16,8 @@
   background: center no-repeat url(../img/CSES2blur.jpg);
 }
 .header-container h1 {
+  width: 100%;
+  text-align: center;
   font-size: 20vw;
   font-weight: 700;
   color: #ffffff;
@@ -31,19 +35,17 @@
   opacity: 0.5;
 }
 
-.ball-container {
-  height: 150px;
+.ball-shortcut {
   width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 150px;
+}
+
+.first {
   background-color: #f1e3d3;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -75px;
-  z-index: 1;
-  opacity: 1;
-  transition: opacity 250ms ease-in;
+}
+
+.second {
+  background-color: #3d6d79;
 }
 
 main {
@@ -62,22 +64,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 .main-container h2 {
   font-size: 1.6rem;
   font-weight: 400;
   color: #ffffff;
 }
-.main-container .container-width > div > a {
+.main-container .container-width > div a {
   border-radius: 50%;
-  width: 13vw;
-  height: 13vw;
-  max-width: 100px;
-  max-height: 100px;
-}
-.main-container .container-width {
-  position: relative;
 }
 
 .grid-item {
@@ -93,18 +87,16 @@ main {
 }
 .grid-item img {
   width: 70%;
-  max-width: 70px;
-  max-height: 70px;
 }
 .grid-item::before {
   content: "";
+  font-size: 1rem;
+  font-weight: 400;
   position: absolute;
   top: -30px;
   opacity: 1;
   transition: top 100ms ease-in, opacity 100ms ease-in;
   color: #ffffff;
-  font-size: 1rem;
-  font-weight: 400;
 }
 
 .cooking::before {
@@ -136,24 +128,33 @@ main {
 }
 
 .ludo::before {
-  content: "Ludothèque";
+  content: "Ludo";
 }
 
 .info::before {
   content: "Informatique";
 }
 
-.ball-shortcut {
-  height: 150px;
-  width: 150px;
+section {
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -75px;
-  z-index: 1;
-  transition: opacity 250ms ease-in;
+  background-color: #f1e3d3;
+  position: relative;
+  min-height: 600px;
+}
+section:nth-child(odd) {
+  background-color: #3d6d79;
+  color: #ffffff;
+}
+
+.card-resize {
+  max-width: 380px;
+}
+.card-resize h3 {
+  font-size: 1.5rem;
 }
 
 .rounded-img {
@@ -196,28 +197,6 @@ main {
 }
 .rounded-img .info-img {
   background: center/cover no-repeat url(../img/informatique.jpg);
-}
-
-section {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f1e3d3;
-  position: relative;
-  z-index: 0;
-  min-height: 600px;
-}
-section:nth-child(odd) {
-  background-color: #3d6d79;
-  color: #ffffff;
-}
-section .first {
-  background-color: #f1e3d3;
-}
-section .second {
-  background-color: #3d6d79;
 }
 
 .time-info {

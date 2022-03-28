@@ -1,7 +1,7 @@
 // Like (interested)
 const btnHeart = document.getElementById('btnHeart')
-const interestedProgress = document.getElementById('interestedProgress')
 const btnInterested = document.getElementById('interested')
+const interestedProgress = document.getElementById('interestedProgress')
 const valueMax =  parseInt(interestedProgress.getAttribute('aria-valuemax'))
 let interestedCount = parseInt(interestedProgress.getAttribute('aria-valuenow'))
 let cpt = 0

@@ -2,11 +2,12 @@
 
 // - Header //
 .header-container {
-    @include flex(100%, calc(100vh - 62px), center, center);
+    @include flex(100%, 100vh, center, center);
     flex-flow: column nowrap;
     background: center no-repeat url(../img/CSES2blur.jpg);
     & h1 {
-        @extend %headerText;
+        width: 100%;
+        text-align: center;
         @include font(20vw, 700);
         color: #ffffff;
         background-color: rgba($color: #000000, $alpha: 0.5);
@@ -23,15 +24,17 @@
     }
 }
 
-.ball-container {
-    @include flex(150px, 150px, center, center);
+.ball-shortcut {
+    @include widthHeight(150px, 150px);
+    @extend %ball;
+}
+
+.first {
     background-color: $bodyColor;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -75px;
-    z-index: 1;
-    opacity: 1;
-    transition: opacity 250ms ease-in;
+}
+
+.second {
+    background-color: $mainColor;
 }
 
 // - Main content //
@@ -43,18 +46,12 @@ main {
 
 .main-container {
     @include flex(100%, 100vh, center, center);
-    position: relative;
     & h2 {
         @include font(1.6rem, 400);
         color: $navColor;
     }
-    & .container-width > div > a {
+    & .container-width > div a {
             border-radius: 50%;
-            @include widthHeight(13vw, 13vw);
-            @include maxWidthHeight(100px, 100px);
-    }
-    & .container-width {
-        position: relative;
     }
 }
 
@@ -65,17 +62,15 @@ main {
     position: relative;
     & img {
         width: 70%;
-        max-width: 70px;
-        max-height: 70px;
     }
     &::before {
         content: '';
+        @include font(1rem, 400);
         position: absolute;
         top: -30px;
         opacity: 1;
         transition: top 100ms ease-in, opacity 100ms ease-in;
         color: $navColor;
-        @include font(1rem, 400)
     }
 }
 
@@ -108,20 +103,29 @@ main {
 }
 
 .ludo::before {
-    content: 'Ludothèque'
+    content: 'Ludo'
 }
 
 .info::before {
     content: 'Informatique'
 }
 
-.ball-shortcut {
-    @include flex(150px, 150px, center, center);
-    border-radius: 50%;
-    position: absolute;
-    bottom: -75px;
-    z-index: 1;
-    transition: opacity 250ms ease-in;
+section {
+    @include flex(100%, 100vh, center, center);
+    background-color: $bodyColor;
+    position: relative;
+    min-height: 600px;
+    &:nth-child(odd) {
+        background-color: $mainColor;
+        color: $navColor;
+    }
+}
+
+.card-resize {
+    max-width: 380px;
+    & h3 {
+        font-size: 1.5rem;
+    }
 }
 
 .rounded-img {
@@ -131,7 +135,7 @@ main {
         @include maxWidthHeight(300px, 300px);
         border-radius: 50%;
     }
-    & .cooking-img {
+    .cooking-img {
         background: center / cover no-repeat url(../img/cuisine.jpg);
     }
     
@@ -165,26 +169,6 @@ main {
     
     .info-img {
         background: center / cover no-repeat url(../img/informatique.jpg);
-    }
-}
-
-section {
-    @include flex(100%, 100vh, center, center);
-    background-color: $bodyColor;
-    position: relative;
-    z-index: 0;
-    min-height: 600px;
-    &:nth-child(odd) {
-        background-color: $mainColor;
-        color: $navColor;
-    }
-
-    .first {
-        background-color: $bodyColor;
-    }
-
-    .second {
-        background-color: $mainColor;
     }
 }
 

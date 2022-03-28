@@ -13,19 +13,17 @@ btnTop.addEventListener('click', (e) => {
 btnMenu.addEventListener('click', (e) =>  {
     menuWrapper.classList.toggle('displayMenu')
     spanWrapper.classList.toggle('displayColor')
-    outsideMenu.classList.toggle('displayOutside')
+    outsideMenu.classList.toggle('displayMenu')
     if (menuWrapper.classList[1] === 'displayMenu') {
-        menuContainer.style.height = '100%'
-        document.body.style.overflow = 'hidden'
+        menuContainer.style.height = '100vh'
     } else {
-        menuContainer.style.height = '0%'
-        document.body.style.overflow = 'visible'
+        menuContainer.style.height = '0vh'
     }
 })
 
 outsideMenu.addEventListener('click', (e) => {
-    menuContainer.style.height = '0%'
+    menuContainer.style.height = '0vh'
     menuWrapper.classList.remove('displayMenu')
     spanWrapper.classList.remove('displayColor')
-    outsideMenu.classList.remove('displayOutside')
+    outsideMenu.classList.remove('displayMenu')
 })
