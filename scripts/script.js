@@ -31,27 +31,27 @@ function hideVideo(video) {
     video.pause()
 }
 
-btnCooking.addEventListener('mouseover', (e) => {
+btnCooking.addEventListener('mouseenter', (e) => {
     displayVideo(cookingVid)
 })
 
-btnCooking.addEventListener('mouseout',(e) => {
+btnCooking.addEventListener('mouseleave',(e) => {
     hideVideo(cookingVid)
 })
 
-btnChess.addEventListener('mouseover', (e) => {
+btnChess.addEventListener('mouseenter', (e) => {
     displayVideo(chessVid)
 })
 
-btnChess.addEventListener('mouseout',(e) => {
+btnChess.addEventListener('mouseleave',(e) => {
     hideVideo(chessVid)
 })
 
-btnDance.addEventListener('mouseover', (e) => {
+btnDance.addEventListener('mouseenter', (e) => {
     displayVideo(danceVid)
 })
 
-btnDance.addEventListener('mouseout',(e) => {
+btnDance.addEventListener('mouseleave',(e) => {
     hideVideo(danceVid)
 })
 
@@ -59,46 +59,46 @@ btnFablab.addEventListener('mouseover', (e) => {
     displayVideo(fablabVid)
 })
 
-btnFablab.addEventListener('mouseout',(e) => {
+btnFablab.addEventListener('mouseleave',(e) => {
     hideVideo(fablabVid)
 })
 
-btnSewing.addEventListener('mouseover', (e) => {
+btnSewing.addEventListener('mouseenter', (e) => {
     displayVideo(sewingVid)
 })
 
-btnSewing.addEventListener('mouseout',(e) => {
+btnSewing.addEventListener('mouseleave',(e) => {
     hideVideo(sewingVid)
 })
 
-btnPottery.addEventListener('mouseover', (e) => {
+btnPottery.addEventListener('mouseenter', (e) => {
     displayVideo(potteryVid)
 })
 
-btnPottery.addEventListener('mouseout',(e) => {
+btnPottery.addEventListener('mouseleave',(e) => {
     hideVideo(potteryVid)
 })
 
-btnMusic.addEventListener('mouseover', (e) => {
+btnMusic.addEventListener('mouseenter', (e) => {
     displayVideo(musicVid)
 })
 
-btnMusic.addEventListener('mouseout',(e) => {
+btnMusic.addEventListener('mouseleave',(e) => {
     hideVideo(musicVid)
 })
 
-btnLudo.addEventListener('mouseover', (e) => {
+btnLudo.addEventListener('mouseenter', (e) => {
     displayVideo(ludoVid)
 })
 
-btnLudo.addEventListener('mouseout',(e) => {
+btnLudo.addEventListener('mouseleave',(e) => {
     hideVideo(ludoVid)
 })
 
-btnInfo.addEventListener('mouseover', (e) => {
+btnInfo.addEventListener('mouseenter', (e) => {
     displayVideo(infoVid)
 })
 
-btnInfo.addEventListener('mouseout',(e) => {
+btnInfo.addEventListener('mouseleave',(e) => {
     hideVideo(infoVid)
 })
