@@ -14,15 +14,6 @@
     transition: opacity 250ms ease-in;
   }
 }
-@media screen and (max-height: 870px) {
-  .ball {
-    display: none;
-  }
-
-  header > .bubble::before, header > .bubble::after {
-    display: none;
-  }
-}
 @media screen and (min-width: 768px) {
   .menu-list > li {
     font-size: 2.5rem;

@@ -16,6 +16,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 870px;
 }
 header .bubble {
   height: 50vw;
