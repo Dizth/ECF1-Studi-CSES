@@ -16,14 +16,15 @@
     }
 }
 
-@media screen and (max-height: 870px) { //header(About)
-    .ball {
-        display: none;
-    }
-    header > .bubble::before, header > .bubble::after {
-        display: none;
-    }
-}
+//header(About) - mit en commentaire car pour une raison inconnue Heroku ne prends pas en compte ce changement ... 
+// @media screen and (max-height: 870px) {
+//     .ball {
+//         display: none;
+//     }
+//     header > .bubble::before, header > .bubble::after {
+//         display: none;
+//     }
+// }
 
 @media screen and (min-width: 768px) {
     .menu-list > li{ //menu

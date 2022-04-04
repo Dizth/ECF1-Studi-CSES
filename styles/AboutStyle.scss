@@ -3,6 +3,7 @@
 //header
 header {
     @include flex(100%, 100vh, center, center);
+    min-height: 870px;
     & .bubble {
         @include flex(50vw, 50vw, center, center);
         @include maxWidthHeight(31rem, 31rem);
