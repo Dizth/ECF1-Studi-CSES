@@ -4,7 +4,6 @@
     .bg-color-title > h1, h2 { //Event Page
         @include font(2.5rem, 500)
     }
-
     .span-wrapper > .btn-menu-wrapper { //menu
         margin-right: 25px;
     }
@@ -17,11 +16,19 @@
     }
 }
 
+@media screen and (max-height: 850px) {
+    .ball {
+        display: none;
+    }
+    header > .bubble::before, header > .bubble::after {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .menu-list > li{ //menu
         @include font(2.5rem, 500);
     }
-
     .header-container { //header(index)
         & h1 {
             @include font(10rem, 700);
@@ -127,12 +134,13 @@
         right: -75px;
     }
 
-    header > .bubble {
+    header > div.bubble {
         margin-top: 0;
         transition: margin-top 250ms ease-in;
         & h1{
             font-size: 2.5rem;
-    }   }
+        }
+    }
 
     .text-wrapper {
         flex-direction: row;

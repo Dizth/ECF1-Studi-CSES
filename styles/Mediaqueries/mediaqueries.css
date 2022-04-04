@@ -14,6 +14,15 @@
     transition: opacity 250ms ease-in;
   }
 }
+@media screen and (max-height: 850px) {
+  .ball {
+    display: none;
+  }
+
+  header > .bubble::before, header > .bubble::after {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .menu-list > li {
     font-size: 2.5rem;
@@ -127,11 +136,11 @@
     right: -75px;
   }
 
-  header > .bubble {
+  header > div.bubble {
     margin-top: 0;
     transition: margin-top 250ms ease-in;
   }
-  header > .bubble h1 {
+  header > div.bubble h1 {
     font-size: 2.5rem;
   }
 
